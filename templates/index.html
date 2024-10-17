@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ texts.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<nav class="nav-menu">
+    <a class="logo" href="#">
+        <img class="logo-img" src="../static/AIDataScience_Image.jpg" alt="AI & Data Science Club Logo" />
+        <span class="logo-title">{{ texts.logo_title }}</span>
+    </a>
+    <a class="link-btn" href="https://involvementcenter.unlv.edu/organization/aidatascience" target="_blank" rel="noreferrer">
+        {{ texts.join_btn }}
+    </a>
+</nav>
+<main>
+    <div class="hero">
+        <h1 class="hero-title">{{ texts.hero_title }}</h1>
+        <p class="hero-subtitle">{{ texts.hero_subtitle }}</p>
+    </div>
+</main>
+<footer>
+    <img class="logo-img" src="../static/AIDataScience_Image.jpg" alt="AI & Data Science Club Logo" />
+    <span class="footer-text">{{ texts.footer_text }}</span>
+</footer>
+</body>
+</html>
