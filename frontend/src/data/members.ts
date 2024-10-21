@@ -1,4 +1,11 @@
-export const members = [
+type Member = {
+  name: string;
+  role: string;
+  link?: string;
+  src?: string;
+};
+
+export const members: Member[] = [
   { name: "Athanasios Tassiadamis", role: "Founder & President" },
   { name: "Faris Atout", role: "Vice President" },
   { name: "Micaela Benavidez-Sosa", role: "Treasurer & Secretary" },

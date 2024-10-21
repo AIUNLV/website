@@ -1,6 +1,6 @@
 from flask import Flask, render_template, send_from_directory
 
-app = Flask(__name__, static_folder='../frontend/build')
+app = Flask(__name__, static_folder='../frontend/build', static_url_path='')
 
 @app.route('/')
 def serve_react_app():
