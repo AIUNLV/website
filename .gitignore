@@ -1,11 +1,36 @@
-# created by virtualenv automatically
-__pycache__/
-*.py[cod]
-
+# IDE settings
 .vscode/
 .idea/
 
+# Backend (Flask)
+__pycache__/
+*.py[cod]
 .venv/
 
+# Miscellaneous
+.DS_Store
+Thumbs.db
+
+# Frontend (React)
 .env
 *.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Frontend dependencies and build
+frontend/node_modules
+frontend/.pnp
+frontend/.pnp.js
+
+# Testing
+/coverage
+
+# Production build
+frontend/build/
+backend/build/
