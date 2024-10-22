@@ -13,6 +13,9 @@ module.exports = {
         "size-100": "100% 100%",
         "size-200": "200% 200%",
       },
+      backgroundImage: {
+        'radial-primary': 'radial-gradient(circle, var(--tw-gradient-stops))',
+      },
       backgroundPosition: {
         "pos-0": "0% 0%",
         "pos-100": "100% 100%",

@@ -6,6 +6,12 @@
 - Node.js and npm
 
 ## Setup 
+### Automated: Use the script 
+```bash
+chmod +x build_run.sh        
+./build_run.sh                                                                                                                                                            ─╯```
+```
+
 ### Set Up the Backend (Flask)
 
 #### Create Python Virtual Environment

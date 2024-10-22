@@ -2,15 +2,13 @@ import Team from "../components/Team";
 import Hero from "../components/Hero";
 import LearnMore from "../components/LearnMore";
 
-const Home = () => {
+const About = () => {
+
   return (
     <>
-      <Hero />
-      <LearnMore />
-      <Team />
-      
+      about page
     </>
   );
 };
 
-export default Home;
+export default About;

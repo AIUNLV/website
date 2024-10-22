@@ -1,36 +1,42 @@
+import { FaArrowRight } from "react-icons/fa6";
+import { texts } from "../data/texts";
+
 const LearnMore = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row justify-evenly items-center py-16 px-12 md:px-36 gap-36 bg-gradient-to-t from-white to-gray-200">
-      <div className="max-w-lg space-y-8 items-start">
-        <h1 className="leading-4 font-light text-3xl text-primary">Discover</h1>
-        <h2 className="leading-8 font-bold text-4xl max-w-sm">
-          What is AI & Data Science all about?
-        </h2>
-        <div className="flex items-center">
-          <div className="bg-primary w-3 h-44 mx-2" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-        <button
-          className="rounded-lg p-4 block text-white w-36 transition-all duration-500
+    <div className="md:px-0 px-10">
+      <div
+        className="flex flex-col md:flex-row items-center justify-center
+        gap-16 py-24 px-auto mx-auto max-w-screen-xl"
+      >
+        <div className="md:max-w-lg max-w-sm space-y-8 items-start md:ml-16">
+          <h1 className="leading-4 font-extralight text-3xl text-primary">
+            {texts.learnMore.title}
+          </h1>
+          <h2 className="leading-8 font-bold text-4xl max-w-sm">
+            {texts.learnMore.subtitle}
+          </h2>
+          <div className="flex items-center">
+            <div className="bg-primary w-3 md:h-44 h-[250px] mx-2" /> {/* separator */}
+            <p>{texts.learnMore.text}</p>
+          </div>
+          <a
+            className="flex items-center gap-3 rounded-lg p-4 text-white w-36 transition-all duration-500
         bg-gradient-to-tl from-primary via-red-600 to-primary bg-size-200 bg-pos-0 hover:bg-pos-100"
-        >
-          Learn More
-        </button>
-      </div>
-      <div className="flex">
-        <img
-          src="/AIDataScience_Image.jpg"
-          alt="filler"
-          className="rounded-full w-full h-auto max-w-[400px] object-cover"
-        />
+            href="/about"
+          >
+            {texts.learnMore.btn}{" "}
+            <FaArrowRight className="h-4 w-4 text-white" />
+          </a>
+        </div>
+        <div className="flex items-center justify-start max-w-[500px] bg-gradient-to-tl from-[#bebcb2] to-[#d5d5ce] rounded-full md:mr-16">
+          <img
+            className="w-auto h-full rounded-full p-6"
+            src="/images/image-3.png"
+            alt="AI & Data Science Club Logo"
+            height={500}
+            width={500}
+          />
+        </div>
       </div>
     </div>
   );

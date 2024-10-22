@@ -1,59 +1,110 @@
+import { texts } from "../data/texts";
+
 const Hero = () => {
+  console.log(texts.hero.stats);
+
   return (
-    <main className="flex md:flex-row flex-col-reverse items-center justify-center md:gap-20 gap-8 pt-40 py-24 bg-gradient-to-b from-white to-gray-200 border-b-8">
-      <div className="md:max-w-xl mx-28 md:mx-20 space-y-8">
-        <h1 className="md:text-6xl text-3xl font-extrabold tracking-tighter">
-          Innovating AI and Data Science at{" "}
-          <span className="bg-gradient-to-t from-primary to-red-500 inline-block text-transparent bg-clip-text">
-            UNLV
-          </span>
-        </h1>
-        <h2 className="text-xl text-gray-700 font-light">
-          Explore cutting-edge technologies and collaborate with like-minded
-          students at UNLV,
-        </h2>
-        <div className="flex gap-2">
-          <a
-            className="inline-block px-8 py-2 text-sm md:text-base rounded-xl text-white 
+    <main className="bg-gradient-to-b from-white to-gray-400 border-b-8 border-b-gray-500/65 md:px-0 px-10">
+      <div
+        className="flex flex-col md:flex-row items-center justify-center
+        gap-16 pt-40 py-24 px-auto mx-auto max-w-screen-xl
+        "
+      >
+        <div className="md:max-w-lg max-w-sm space-y-8 md:ml-16">
+          <h1
+            className="md:text-6xl text-4xl font-extrabold tracking-tighter md:max-w-full max-w-[400px] text-center md:text-left"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            {texts.hero.title}
+            <span className="bg-gradient-to-t from-primary to-red-500 inline-block text-transparent bg-clip-text md:w-[150px] w-[90px]">
+              {/* needs fixed width because of the gradient clipping */}
+              {texts.hero.gradient}
+            </span>
+          </h1>
+          <h2
+            className="text-lg md:text-xl text-gray-700 font-light"
+            data-aos="fade-in"
+            data-aos-duration="2000"
+            data-aos-delay="250"
+          >
+            {texts.hero.subtitle}
+          </h2>
+          <div className="flex gap-2">
+            <span
+              data-aos="fade-right"
+              data-aos-duration="800"
+              data-aos-delay="450"
+            >
+              <a
+                className="inline-block px-8 py-2 text-sm md:text-base rounded-xl text-white 
             transition-all duration-500 bg-gradient-to-l from-primary via-red-600 to-primary bg-size-200 bg-pos-0 hover:bg-pos-100"
-            href="https://involvementcenter.unlv.edu/organization/aidatascience"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Join our community
-          </a>
-          <a
-            className="inline-block px-8 py-2 border text-sm md:text-base border-black rounded-xl transition filter text-black
+                href="https://involvementcenter.unlv.edu/organization/aidatascience"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {texts.hero.join_btn}
+              </a>
+            </span>
+            <span
+              data-aos="fade-right"
+              data-aos-duration="800"
+              data-aos-delay="250"
+            >
+              <a
+                className="inline-block px-8 py-2 border text-sm md:text-base border-black rounded-xl transition-all duration-700 text-black
             hover:shadow-[0px_50px_100px_-20px_rgba(50,50,93,0.25),_0px_30px_60px_-30px_rgba(0,0,0,0.3),_inset_0px_-2px_6px_0px_rgba(10,37,64,0.35)]"
-            href="/signin"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Sign in
-          </a>
+                href="/signin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {texts.hero.signin_btn}
+              </a>
+            </span>
+          </div>
+          <div className="flex" data-aos-id-stats>
+            {texts.hero.stats.map((stat, index) => (
+              <div key={index} className="flex items-center">
+                <span // separate element because hover doesn't work with it
+                  data-aos="fade-up"
+                  data-aos-anchor="[data-aos-id-blocks]"
+                  data-aos-delay={400 * index + 250}
+                >
+                  <div className="flex flex-col -space-y-2 hover:scale-110 transition-transform duration-300">
+                    <span className="font-bold text-lg tracking-tight">
+                      {stat.stat}
+                    </span>
+                    <span className="font-light">{stat.label}</span>
+                  </div>
+                </span>
+                {/* render the divider only if not the last item */}
+                {index < texts.hero.stats.length - 1 && (
+                  <div
+                    className="bg-primary w-[2px] h-full mx-8"
+                    data-aos="fade-up"
+                    data-aos-anchor="[data-aos-id-blocks]"
+                    data-aos-delay={400 * index + 500}
+                  />
+                )}
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="flex gap-10">
-          <div className="flex flex-col -space-y-2">
-            <span className="font-bold text-lg tracking-tight">190</span>
-            <span>members</span>
-          </div>
-          <div className="bg-primary w-[2px] h-auto mx-2" />
-          <div className="flex flex-col -space-y-2">
-            <span className="font-bold text-lg tracking-tight">3</span>
-            <span>projects</span>
-          </div>
-          <div className="bg-primary w-[2px] h-auto mx-2" />
-          <div className="flex flex-col -space-y-2">
-            <span className="font-bold text-lg tracking-tight">10</span>
-            <span>workshops</span>
-          </div>
+        <div
+          className="flex items-center justify-start md:mr-16"
+          data-aos="fade-left"
+          data-aos-delay="500"
+          data-aos-duration="1000"
+        >
+          <img
+            className="w-auto h-full max-h-[500px]"
+            src="/images/image-1.png"
+            alt="AI & Data Science Club Logo"
+            height={500}
+            width={500}
+          />
         </div>
       </div>
-      <img
-        className="w-48 h-48 md:h-64 md:w-64 xl:h-80 xl:w-80 object-cover rounded-full p-4 bg-secondary"
-        src="/AIDataScience_Image.jpg"
-        alt="AI & Data Science Club Logo"
-      />
     </main>
   );
 };
