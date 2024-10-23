@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { socials } from "../data/socials";
+import { socials } from "../data/links";
 
 const Navbar = () => {
   return (
@@ -22,8 +21,6 @@ const Navbar = () => {
         </span>
       </a>
       <div className="flex flex-row items-center justify-center gap-2">
-        <Link to="/about">About</Link>
-        <Link to="/projects">Projects</Link>
         <ul className="items-center gap-6 mr-4 md:flex hidden">
           {socials.map((social, index) => (
             <li key={index}>

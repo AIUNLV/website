@@ -7,9 +7,10 @@
 
 ## Setup 
 ### Automated: Use the script 
+- Can run on Mac or Unix systems, for Windows you need WSL to run bash scripts
 ```bash
-chmod +x build_run.sh        
-./build_run.sh                                                                                                                                                            ─╯```
+chmod +x build_run.sh # with WSL or Mac
+./build_run.sh
 ```
 
 ### Set Up the Backend (Flask)
@@ -58,7 +59,8 @@ This will generate the necessary files in the `build` directory.
 #### Run the Flask Server
 Navigate back to the `backend` directory (if you're not there) and run:
 ```bash
-python3 app.py
+python app.py # Windows
+python3 app.py # Mac
 ```
 The Flask server will start and serve your React app at `http://localhost:5000/`.
 

@@ -3,6 +3,7 @@
 # Navigate to the frontend directory and build the frontend
 echo "Navigating to frontend and building..."
 cd frontend || { echo "Failed to navigate to frontend directory."; exit 1; }
+npm i || { echo "npm i failed"; exit 1; }
 npm run build || { echo "npm run build failed"; exit 1; }
 
 # Navigate back to backend directory
