@@ -7,7 +7,7 @@ const LearnMore = () => {
     <div className="bg-gradient-to-t from-white to-gray-400 md:px-0 px-10">
       <div
         className="flex flex-col md:flex-row items-center justify-center
-        gap-16 py-24 px-auto mx-auto max-w-screen-xl"
+        gap-16 md:py-24 py-10 px-auto mx-auto max-w-screen-xl"
       >
         <div className="md:max-w-lg max-w-sm space-y-8 items-start md:ml-16">
           <h1 className="leading-4 font-extralight text-3xl text-primary">

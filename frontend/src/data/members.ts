@@ -34,15 +34,15 @@ const admins: Member[] = [
 const development: Member[] = [
   {
     name: "Daniel Mamuza",
-    role: "tbd",
+    role: "Project Coordinator",
     link: "https://danielmamuza.com",
     src: "/members/daniel_mamuza.jpg",
   },
   {
     name: "Teddy Lieber",
-    role: "tbd",
-    link: "https://www.linkedin.com/in/athanasios-t-8a17b4294",
-    src: "/AIDataScience_Image.jpg",
+    role: "Officer",
+    link: "https://www.linkedin.com/in/teddy-lieber-13bb16211/",
+    src: "/members/teddy_lieber.jpg",
   },
   {
     name: "Ziad Alharbi",
@@ -57,10 +57,10 @@ const development: Member[] = [
     src: "/members/sebastian_yepez.jpg",
   },
   {
-    name: "John",
+    name: "John Kim",
     role: "tbd",
-    link: "https://www.linkedin.com/in/athanasios-t-8a17b4294",
-    src: "/AIDataScience_Image.jpg",
+    link: "https://www.linkedin.com/in/john-kim-profile/",
+    src: "/members/john_kim.jpg",
   },
 ];
 
@@ -72,10 +72,10 @@ const volunteering: Member[] = [
     src: "/AIDataScience_Image.jpg",
   },
   {
-    name: "Daya",
-    role: "tbd",
-    link: "https://www.linkedin.com/in/athanasios-t-8a17b4294",
-    src: "/AIDataScience_Image.jpg",
+    name: "Dayanara Reyna",
+    role: "Member Development",
+    link: "www.linkedin.com/in/dayanara-reyna",
+    src: "/members/dayanara_reyna.jpg",
   },
 ];
 

@@ -12,7 +12,7 @@ const Team = () => {
               {team.name}
             </span>
             <ul
-              className={`flex flex-wrap justify-center gap-8 mt-4 ${
+              className={`flex flex-wrap justify-center md:gap-8 gap-2 mt-4 ${
                 team.members.length > 4 ? "md:max-w-2xl" : "md:max-w-4xl" // for nicer print out with 5 in one section
               }
               ${
