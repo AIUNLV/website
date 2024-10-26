@@ -1,4 +1,4 @@
-import { FaBrain, FaCode, FaGlobe, FaRobot, FaSpinner } from "react-icons/fa6";
+import { FaBrain, FaGlobe, FaRobot, FaSpinner } from "react-icons/fa6";
 
 export type Project = {
   title: string;
@@ -11,21 +11,29 @@ export const projects: Project[] = [
   {
     title: "Discord Bot",
     text: "Description needed",
-    icon: <FaRobot className="text-white md:h-10 md:w-10 h-5 w-5" />,
+    icon: (
+      <FaRobot className="text-white md:h-10 md:w-10 h-5 w-5 animate-none group-hover:animate-bounce delay-200" />
+    ),
   },
   {
     title: "Neural Network",
     text: "Description needed",
-    icon: <FaBrain className="text-white md:h-10 md:w-10 h-5 w-5" />,
+    icon: (
+      <FaBrain className="text-white md:h-10 md:w-10 h-5 w-5 transition-none group-hover:animate-bounce delay-200" />
+    ),
   },
   {
     title: "Website",
     text: "Description needed",
-    icon: <FaGlobe className="text-white md:h-10 md:w-10 h-5 w-5" />,
+    icon: (
+      <FaGlobe className="text-white md:h-10 md:w-10 h-5 w-5 transition-none group-hover:animate-bounce delay-200" />
+    ),
   },
   {
     title: "Project 3",
     text: "Description needed",
-    icon: <FaSpinner className="text-white md:h-10 md:w-10 h-5 w-5 animate-none group-hover:animate-spin" />,
+    icon: (
+      <FaSpinner className="text-white md:h-10 md:w-10 h-5 w-5 animate-none group-hover:animate-spin" />
+    ),
   },
 ];

@@ -7,7 +7,7 @@ const Projects = () => {
       <main className="pt-32 py-24 flex flex-col justify-center items-center space-y-2 md:mx-0 mx-10 ">
         <h1 className="text-6xl ">Projects</h1>
         <h2 className="text-xl text-gray-700 md:text-left text-center">
-          The current projects the club is actively working on!
+          The projects the club is actively working on!
         </h2>
       </main>
       <section className="flex flex-col justify-center items-center mb-20 md:mx-0 mx-10">

@@ -3,7 +3,7 @@ import { socials } from "../data/links";
 const Navbar = () => {
   return (
     <nav
-      className="fixed flex items-center justify-between w-full h-20 md:px-10 px-5 bg-secondary/50 backdrop-blur-md shadow-xl rounded-b-3xl z-50"
+      className="fixed flex items-center justify-between w-full md:h-20 h-16 md:px-10 px-5 bg-secondary/50 backdrop-blur-md shadow-xl rounded-b-3xl z-50"
       data-aos="fade-down"
       data-aos-duration="700"
     >
@@ -12,7 +12,7 @@ const Navbar = () => {
         href="/"
       >
         <img
-          className="w-16 h-16 rounded-full bg-secondary"
+          className="md:w-16 md:h-16 h-12 w-12 rounded-full bg-secondary"
           src="/AIDataScience_Image.jpg"
           alt="AI & Data Science Club Logo"
         />
@@ -26,8 +26,10 @@ const Navbar = () => {
             <li key={index}>
               <a
                 href={social.href}
-                className="flex items-center justify-center rounded-full text-primary hover:text-primary/80 transition-colors duration-300"
+                className="flex items-center justify-center rounded-full text-primary hover:text-primary/60 transition-all duration-300 hover:scale-110"
                 aria-label={social.alt}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <span className="text-2xl">{social.icon}</span>
               </a>
@@ -35,7 +37,7 @@ const Navbar = () => {
           ))}
         </ul>
         <a
-          className="inline-block px-8 py-2 bg-primary rounded-xl hover:drop-shadow-md text-white
+          className="inline-block md:px-8 px-5 py-2 bg-primary rounded-xl hover:drop-shadow-md text-white md:text-base text-sm
         transition-all duration-500 bg-gradient-to-tl from-primary via-red-600 to-primary bg-size-200 bg-pos-0 hover:bg-pos-100"
           href="https://involvementcenter.unlv.edu/organization/aidatascience"
           target="_blank"

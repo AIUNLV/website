@@ -16,8 +16,8 @@ const LearnMore = () => {
           <h2 className="leading-8 font-bold text-4xl max-w-sm">
             {texts.learnMore.subtitle}
           </h2>
-          <div className="flex items-center">
-            <div className="bg-primary w-3 md:h-44 h-[250px] mx-2" />{" "}
+          <div className="flex items-stretch flex-row justify-start">
+            <span className="bg-primary w-3 h-auto mx-2"></span>
             {/* separator */}
             <p>{texts.learnMore.text}</p>
           </div>

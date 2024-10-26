@@ -5,11 +5,16 @@ import { texts } from "../data/texts";
 const Footer = () => {
   return (
     <footer className="flex md:flex-row flex-col items-center justify-center md:gap-20 gap-4 w-full mx-auto p-4 bg-secondary md:h-[15vh]">
-      <img
-        className="w-20 h-20 rounded-full"
-        src="/AIDataScience_Image.jpg"
-        alt="AI & Data Science Club Logo"
-      />
+      <a
+        className="flex items-center no-underline hover:scale-110 transform transition-transform duration-150"
+        href="/"
+      >
+        <img
+          className="w-20 h-20 rounded-full"
+          src="/AIDataScience_Image.jpg"
+          alt="AI & Data Science Club Logo"
+        />
+      </a>
       <div className="md:text-left text-center">
         <h3 className="text-primary font-light text-lg">Links</h3>
         <ul className="flex flex-col">

@@ -1,10 +1,17 @@
 import { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
+import EyeToggle from "../components/EyeToggle";
 
 const Login = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string>("");
+
+  const [isVisible, setIsVisible] = useState(false); 
+
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible); 
+  };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
@@ -20,8 +27,8 @@ const Login = () => {
     setError("");
 
     // just for testing
-    console.log("Email:", email);
-    console.log("Password:", password);
+  alert(`Email: ${email}, Password: ${password}`);
+   
 
     // flask backend later
   };
@@ -55,15 +62,19 @@ const Login = () => {
             >
               Password
             </label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              className="w-full p-3 border border-gray-300 rounded-lg shadow-inner"
-            />
-            
+            <div className="relative">
+              <input
+                type={isVisible ? "text" : "password"}
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                className="w-full p-3 border border-gray-300 rounded-lg shadow-inner"
+              />
+              <div className="absolute right-3 top-[40%] transform -translate-y-1/4 flex items-center cursor-pointer">
+                <EyeToggle isVisible={isVisible} onToggle={toggleVisibility} />
+              </div>
+            </div>
           </div>
           <div className="flex justify-between items-center">
             <button
@@ -73,7 +84,12 @@ const Login = () => {
             >
               Login
             </button>
-            <Link to="/signup" className="hover:text-primary transition-colors duration-300 mr-2">Create Account?</Link>
+            <Link
+              to="/signup"
+              className="hover:text-primary transition-colors duration-300 mr-2"
+            >
+              Create Account?
+            </Link>
           </div>
         </form>
       </div>

@@ -6,6 +6,7 @@ export type Member = {
 };
 
 export type Team = {
+  id: string; // for aos
   name: string;
   members: Member[];
 };
@@ -26,7 +27,7 @@ const admins: Member[] = [
   {
     name: "Micaela Benavidez-Sosa",
     role: "Treasurer & Secretary",
-    link: "https://www.linkedin.com/in/athanasios-t-8a17b4294",
+    link: "",
     src: "/AIDataScience_Image.jpg",
   },
 ];
@@ -45,37 +46,10 @@ const development: Member[] = [
     src: "/members/teddy_lieber.jpg",
   },
   {
-    name: "Ziad Alharbi",
-    role: "tbd",
-    link: "https://www.linkedin.com/in/athanasios-t-8a17b4294",
-    src: "/AIDataScience_Image.jpg",
-  },
-  {
-    name: "Sebastion Yepez",
-    role: "tbd",
-    link: "sebastianyepez.github.io",
-    src: "/members/sebastian_yepez.jpg",
-  },
-  {
     name: "John Kim",
-    role: "tbd",
+    role: "Officer",
     link: "https://www.linkedin.com/in/john-kim-profile/",
     src: "/members/john_kim.jpg",
-  },
-];
-
-const volunteering: Member[] = [
-  {
-    name: "Kaysan",
-    role: "tbd",
-    link: "https://www.linkedin.com/in/athanasios-t-8a17b4294",
-    src: "/AIDataScience_Image.jpg",
-  },
-  {
-    name: "Dayanara Reyna",
-    role: "Member Development",
-    link: "www.linkedin.com/in/dayanara-reyna",
-    src: "/members/dayanara_reyna.jpg",
   },
 ];
 
@@ -87,39 +61,72 @@ const outreach: Member[] = [
     src: "/members/garrett_prentice.jpg",
   },
   {
+    name: "Steven Liang",
+    role: "Social Media Manager",
+    link: "https://linkedin.com/in/steven-liang0000",
+    src: "members/steven_liang.jpg",
+  },
+  {
     name: "Daniel Gladstein",
     role: "Outreach Officer",
-    link: "www.linkedin.com/in/daniel-gladstein-1b1ba0207",
+    link: "https://www.linkedin.com/in/daniel-gladstein-1b1ba0207",
     src: "/members/daniel_gladstein.jpg",
   },
   {
-    name: "Narek 'Tony' Tonoyan",
-    role: "Member-Development",
-    link: "https://www.linkedin.com/in/athanasios-t-8a17b4294",
+    name: "Ziad Alharbi",
+    role: "Outreach Offier",
+    link: "",
     src: "/AIDataScience_Image.jpg",
-  },
-  {
-    name: "Steven Liang",
-    role: "Social Media Manager",
-    link: "http://linkedin.com/in/steven-liang0000",
-    src: "members/steven_liang.jpg",
   },
 ];
 
+const members_development: Member[] = [
+  {
+    name: "Sebastion Yepez",
+    role: "Workshop Officer",
+    link: "https://sebastianyepez.github.io",
+    src: "/members/sebastian_yepez.jpg",
+  },
+  {
+    name: "Dayanara Reyna",
+    role: "Member Development",
+    link: "https://www.linkedin.com/in/dayanara-reyna",
+    src: "/members/dayanara_reyna.jpg",
+  },
+  {
+    name: "Narek 'Tony' Tonoyan",
+    role: "Member Development",
+    link: "https://www.linkedin.com/in/narek-tonoyan-ba9838326/",
+    src: "/AIDataScience_Image.jpg",
+  },
+  {
+    name: "Kaysan",
+    role: "Volunteering Officer",
+    link: "",
+    src: "/AIDataScience_Image.jpg",
+  },
+];
+
+
+// exporting to team component
 export const teams: Team[] = [
   {
+    id: "admin",
     name: "Adminstrative",
     members: admins,
   },
   {
+    id: "outreach",
     name: "Outreach",
     members: outreach,
   },
   {
-    name: "Volunteering",
-    members: volunteering,
+    id: "workshops",
+    name: "Member-Development & Workshops",
+    members: members_development,
   },
   {
+    id: "development",
     name: "Development",
     members: development,
   },

@@ -1,11 +1,18 @@
 import { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
+import EyeToggle from "../components/EyeToggle";
 
 const SignUp = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const [confirmPassword, setConfirmPassword] = useState<string>(""); // New state for confirm password
+  const [confirmPassword, setConfirmPassword] = useState<string>(""); 
   const [error, setError] = useState<string>("");
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
@@ -18,10 +25,16 @@ const SignUp = () => {
       return;
     }
 
-    if (password !== confirmPassword) {
-      setError("Passwords do not match");
+     if (password !== confirmPassword) {
+       setError("Passwords do not match");
+       return;
+     }
+
+    if (password.length < 8){
+       setError("Passwords must be over 8 characters");
       return;
     }
+   
 
     setError("");
 
@@ -60,14 +73,19 @@ const SignUp = () => {
             >
               Password
             </label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              className="w-full p-3 border border-gray-300 rounded-lg shadow-inner"
-            />
+            <div className="relative">
+              <input
+                type={isVisible ? "text" : "password"}
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                className="w-full p-3 border border-gray-300 rounded-lg shadow-inner"
+              />
+              <div className="absolute right-3 top-[40%] transform -translate-y-1/4 flex items-center cursor-pointer">
+                <EyeToggle isVisible={isVisible} onToggle={toggleVisibility} />
+              </div>
+            </div>
           </div>
           <div className="mb-6">
             <label
@@ -76,14 +94,19 @@ const SignUp = () => {
             >
               Confirm Password
             </label>
-            <input
-              type="password"
-              id="confirmPassword"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              required
-              className="w-full p-3 border border-gray-300 rounded-lg shadow-inner"
-            />
+            <div className="relative">
+              <input
+                type={isVisible ? "text" : "password"}
+                id="confirmPassword"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                required
+                className="w-full p-3 border border-gray-300 rounded-lg shadow-inner"
+              />
+              <div className="absolute right-3 top-[40%] transform -translate-y-1/4 flex items-center cursor-pointer">
+                <EyeToggle isVisible={isVisible} onToggle={toggleVisibility} />
+              </div>
+            </div>
           </div>
           {error && <p className="text-red-600 ml-2 mb-4">{error}</p>}
           <div className="flex justify-between items-center">

@@ -18,7 +18,6 @@ const App = () => {
     AOS.init({
       once: true,
       duration: 600,
-      disable: "phone",
       easing: "ease-out-sine",
     });
   }, []);

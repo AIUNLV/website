@@ -3,11 +3,11 @@ import TeamCard from "./TeamCard";
 
 const Team = () => {
   return (
-    <section className="mt-10 text-center flex flex-col justify-center bg-gradient-to-b from-white to-gray-300">
+    <section className="mt-10 pb-16 text-center flex flex-col justify-center bg-gradient-to-b from-white to-gray-300">
       <h2 className="text-3xl font-semibold mb-4">Our Team</h2>
       <div className="bg-gray-300/30 mx-auto md:px-10 px-5 pt-10 rounded-3xl backdrop-blur-sm">
-        {teams.map((team, index) => (
-          <div key={index}>
+        {teams.map((team, i) => (
+          <div key={i}>
             <span className="font-light underline underline-offset-2">
               {team.name}
             </span>
@@ -20,7 +20,7 @@ const Team = () => {
                   ? "max-w-sm"
                   : "max-w-xl" // for nicer print out with 5 in one section
               } mx-auto mb-10`}
-              data-aos-id={team.name}
+              id={team.id}
             >
               {team.members.map(
                 (member, index) =>
@@ -28,9 +28,9 @@ const Team = () => {
                     <li
                       key={index}
                       data-aos="fade-up"
-                      data-aos-offset="2000" // neccessary because it was loading in early :(
-                      data-aos-anchor={team.name}
-                      data-aos-delay={250  * index}
+                      data-aos-anchor={`#${team.id}`}
+                      data-aos-duration={350}
+                      data-aos-delay={250 * (index + i)}
                     >
                       <TeamCard member={member} />
                     </li>

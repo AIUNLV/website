@@ -2,13 +2,12 @@ import { Link } from "react-router-dom";
 import { texts } from "../data/texts";
 
 const Hero = () => {
-  console.log(texts.hero.stats);
 
   return (
     <main className="bg-gradient-to-b from-white to-gray-400 md:border-b-8 border-b-gray-400 md:px-0 px-10">
       <div
         className="flex flex-col md:flex-row items-center justify-center
-        gap-16 pt-40 py-24 px-auto mx-auto max-w-screen-xl
+        gap-16 md:pt-40 pt-32 py-24 px-auto mx-auto max-w-screen-xl
         "
       >
         <div className="md:max-w-lg max-w-sm space-y-8 md:ml-16">
@@ -18,8 +17,8 @@ const Hero = () => {
             data-aos-duration="1000"
           >
             {texts.hero.title}
-            <span className="bg-gradient-to-t from-primary to-red-500 inline-block text-transparent bg-clip-text md:w-[150px] w-[90px]">
-              {/* needs fixed width because of the gradient clipping */}
+            <span className="bg-gradient-to-t from-primary to-red-500 inline-block text-transparent bg-clip-text pr-2">
+              {/* needs padding right because of the gradient clipping */}
               {texts.hero.gradient}
             </span>
           </h1>
@@ -63,13 +62,13 @@ const Hero = () => {
           </div>
           <div className="flex" data-aos-id-stats>
             {texts.hero.stats.map((stat, index) => (
-              <div key={index} className="flex items-center">
+              <div key={index} className="flex items-center cursor-default text-sm md:text-base">
                 <span // separate element because hover doesn't work with it
                   data-aos="fade-up"
-                  data-aos-anchor="[data-aos-id-blocks]"
+                  data-aos-anchor="[data-aos-id-stats]"
                   data-aos-delay={400 * index + 250}
                 >
-                  <div className="flex flex-col -space-y-2 hover:scale-110 transition-transform duration-300">
+                  <div className="flex flex-col items-center md:items-start justify-center md:justify-start -space-y-2 hover:scale-110 transition-transform duration-300">
                     <span className="font-bold text-lg tracking-tight">
                       {stat.stat}
                     </span>
@@ -81,7 +80,7 @@ const Hero = () => {
                   <div
                     className="bg-primary w-[2px] h-full mx-8"
                     data-aos="fade-up"
-                    data-aos-anchor="[data-aos-id-blocks]"
+                    data-aos-anchor="[data-aos-id-stacks]"
                     data-aos-delay={400 * index + 500}
                   />
                 )}
