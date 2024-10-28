@@ -5,7 +5,7 @@ export const texts = {
     subtitle:
       "Explore cutting-edge technologies and collaborate with like-minded students at UNLV.",
     join_btn: "Join our community",
-    signin_btn: "Sign in",
+    explore_btn: "Explore more",
     stats: [
       { stat: "190", label: "members" },
       { stat: "3", label: "projects" },
@@ -16,14 +16,15 @@ export const texts = {
   learnMore: {
     title: "Discover",
     subtitle: "What is AI & Data Science all about?",
-    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-              `,
+    text1: `At the UNLV AI & Data Science Club, we’re committed to breaking down advanced concepts in machine learning and 
+    artificial intelligence through hands-on workshops, insightful talks, and collaborative projects. Our workshops dive into 
+    essential topics like data visualization, machine learning models, Python for data science, and tools such as TensorFlow and 
+    PyTorch. We aim to equip students, especially those new to the field, with practical skills in AI and data science.
+            `,
+    text2: `Beyond technical skills, our club emphasizes responsible AI practices, from ethical considerations to staying current with 
+    industry trends, along with professional growth through competitions and networking opportunities. We welcome students from 
+    all backgrounds, encouraging interdisciplinary approaches and teamwork among members.
+            `,
     btn: "Learn more",
   },
 

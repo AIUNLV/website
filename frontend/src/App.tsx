@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Projects from "./pages/Projects";
+import Gallery from "./pages/Gallery";
 
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -28,9 +28,10 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/gallery" element={<Gallery />} />
+        {/* CONTINUE THESE LATER */}
+        {/* <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} /> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

@@ -31,7 +31,7 @@ const Footer = () => {
           ))}
         </ul>
       </div>
-      <span className="max-w-xs font-extralight md:text-left text-center">
+      <span className="max-w-xs font-extralight md:text-left text-center leading-tight">
         {texts.footer.text}
       </span>
     </footer>

@@ -9,6 +9,7 @@ const LearnMore = () => {
         className="flex flex-col md:flex-row items-center justify-center
         gap-16 md:py-24 py-10 px-auto mx-auto max-w-screen-xl"
       >
+        
         <div className="md:max-w-lg max-w-sm space-y-8 items-start md:ml-16">
           <h1 className="leading-4 font-extralight text-3xl text-primary">
             {texts.learnMore.title}
@@ -17,14 +18,17 @@ const LearnMore = () => {
             {texts.learnMore.subtitle}
           </h2>
           <div className="flex items-stretch flex-row justify-start">
-            <span className="bg-primary w-3 h-auto mx-2"></span>
+            <span className="bg-primary w-5 h-auto mx-2"></span>
             {/* separator */}
-            <p>{texts.learnMore.text}</p>
+            <div className="block space-y-1">
+              <p>{texts.learnMore.text1}</p>
+              <p>{texts.learnMore.text2}</p>
+            </div>
           </div>
           <Link
             className="flex items-center gap-3 rounded-lg p-4 text-white w-36 transition-all duration-500
         bg-gradient-to-tl from-primary via-red-600 to-primary bg-size-200 bg-pos-0 hover:bg-pos-100"
-            to="/projects"
+            to="/gallery"
           >
             {texts.learnMore.btn}{" "}
             <FaArrowRight className="h-4 w-4 text-white" />
