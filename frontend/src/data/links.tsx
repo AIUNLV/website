@@ -1,13 +1,13 @@
 import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa6";
 
-
 export const links = [
-  { name: "Gallery", href: "/gallery" },
+  { name: "Gallery", href: "/gallery", alt: "Club Gallery" },
   // { name: "Log In", href: "/login" },
   // { name: "Sign Up", href: "/signup" },
   {
     name: "Involvement Center",
     href: "https://involvementcenter.unlv.edu/organization/aidatascience",
+    alt: "Involvement Center",
   },
 ];
 

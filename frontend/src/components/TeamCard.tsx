@@ -13,6 +13,8 @@ const TeamCard = ({ member }: TeamCardProps) => {
       <img
         src={member.src}
         alt={`${member.name} Profile`}
+        height={80}
+        width={80}
         className="rounded-full md:h-20 md:w-20 object-cover h-16 w-16 border border-black/10"
       />
       <span className="md:text-lg text-sm font-semibold max-w-[150px]">

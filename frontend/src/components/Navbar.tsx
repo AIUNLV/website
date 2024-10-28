@@ -3,7 +3,7 @@ import { socials } from "../data/links";
 const Navbar = () => {
   return (
     <nav
-      className="fixed flex items-center justify-between w-full md:h-20 h-16 md:px-10 px-5 bg-secondary/50 backdrop-blur-md shadow-xl rounded-b-3xl z-50"
+      className="fixed flex items-center justify-between w-full md:h-20 h-16 md:px-10 px-8 bg-secondary/50 backdrop-blur-md shadow-xl rounded-b-3xl z-50"
       data-aos="fade-down"
       data-aos-duration="700"
     >
@@ -13,7 +13,7 @@ const Navbar = () => {
       >
         <img
           className="md:w-16 md:h-16 h-12 w-12 rounded-full bg-secondary"
-          src="/AIDataScience_Image.jpg"
+          src="/AIDataScience_Image.webp"
           alt="AI & Data Science Club Logo"
         />
         <span className="ml-2 text-lg font-bold md:inline hidden">

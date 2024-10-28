@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { texts } from "../data/texts";
 
 const Hero = () => {
-
   return (
     <main className="bg-gradient-to-b from-white to-gray-400 md:border-b-8 border-b-gray-400 md:px-0 px-10">
       <div
@@ -62,7 +61,10 @@ const Hero = () => {
           </div>
           <div className="flex" data-aos-id-stats>
             {texts.hero.stats.map((stat, index) => (
-              <div key={index} className="flex items-center cursor-default text-sm md:text-base">
+              <div
+                key={index}
+                className="flex items-center cursor-default text-sm md:text-base"
+              >
                 <span // separate element because hover doesn't work with it
                   data-aos="fade-up"
                   data-aos-anchor="[data-aos-id-stats]"
@@ -91,15 +93,17 @@ const Hero = () => {
         <div
           className="flex items-center justify-start md:mr-16"
           data-aos="fade-left"
-          data-aos-delay="500"
-          data-aos-duration="1000"
+          data-aos-delay="200"
+          data-aos-duration="800"
         >
           <img
             className="w-auto h-full max-h-[500px]"
-            src="/images/image-1.png"
+            src="/images/image-1.webp"
             alt="AI & Data Science Club Logo"
             height={500}
             width={500}
+            fetchPriority="high"
+            loading="eager"
           />
         </div>
       </div>

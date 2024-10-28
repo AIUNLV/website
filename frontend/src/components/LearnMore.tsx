@@ -9,7 +9,6 @@ const LearnMore = () => {
         className="flex flex-col md:flex-row items-center justify-center
         gap-16 md:py-24 py-10 px-auto mx-auto max-w-screen-xl"
       >
-        
         <div className="md:max-w-lg max-w-sm space-y-8 items-start md:ml-16">
           <h1 className="leading-4 font-extralight text-3xl text-primary">
             {texts.learnMore.title}
@@ -20,7 +19,7 @@ const LearnMore = () => {
           <div className="flex items-stretch flex-row justify-start">
             <span className="bg-primary w-5 h-auto mx-2"></span>
             {/* separator */}
-            <div className="block space-y-1">
+            <div className="block space-y-2 md:text-base text-sm">
               <p>{texts.learnMore.text1}</p>
               <p>{texts.learnMore.text2}</p>
             </div>
@@ -37,7 +36,7 @@ const LearnMore = () => {
         <div className="flex items-center justify-start max-w-[500px] bg-gradient-to-tl from-[#bebcb2] to-[#d5d5ce] rounded-full md:mr-16">
           <img
             className="w-auto h-full rounded-full p-6"
-            src="/images/image-3.png"
+            src="/images/image-3.webp"
             alt="AI & Data Science Club Logo"
             height={500}
             width={500}

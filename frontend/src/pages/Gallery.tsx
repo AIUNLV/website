@@ -23,7 +23,7 @@ const Gallery: React.FC = () => {
   return (
     <div className="min-h-[85vh]">
       <main className="pt-32 pb-5 flex flex-col justify-center items-center space-y-10 md:mx-0 mx-10 ">
-        <h1 className="text-6xl">Club Gallery</h1>
+        <h1 className="md:text-6xl text-5xl">Club Gallery</h1>
         <div className="relative flex justify-center mb-4">
           {/* underline border div */}
           <div
@@ -81,7 +81,7 @@ const Gallery: React.FC = () => {
             <h3 className="text-xl text-gray-700 md:text-left text-center">
               The projects the club is actively working on!
             </h3>
-            <ul className="grid grid-cols-3 justify-center items-center gap-10 max-w-6xl mt-5">
+            <ul className="grid md:grid-cols-3 justify-center items-center gap-10 max-w-6xl mt-5">
               {projects.map((project, index) => (
                 <li key={index} className="h-full w-full">
                   <ProjectCard project={project} />
