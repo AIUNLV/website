@@ -7,6 +7,9 @@ interface TeamCardProps {
 const TeamCard = ({ member }: TeamCardProps) => {
   return (
     <a
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={member.name}
       href={member.link}
       className="flex flex-col justify-evenly gap-2 items-center bg-secondary md:rounded-2xl rounded-lg md:w-44 w-32 md:h-60 h-48 duration-300 ease-in-out hover:scale-105 hover:shadow-xl p-4"
     >

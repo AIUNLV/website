@@ -42,7 +42,7 @@ const development: Member[] = [
   {
     name: "Teddy Lieber",
     role: "Officer",
-    link: "https://www.linkedin.com/in/teddy-lieber-13bb16211/",
+    link: "https://www.linkedin.com/in/theodore-lieber-13bb16211/",
     src: "/members/teddy_lieber.webp",
   },
   {
@@ -97,7 +97,7 @@ const members_development: Member[] = [
     name: "Narek 'Tony' Tonoyan",
     role: "Member Development",
     link: "https://www.linkedin.com/in/narek-tonoyan-ba9838326/",
-    src: "/AIDataScience_Image.jpg",
+    src: "/members/tony_tonoyan.webp",
   },
   {
     name: "Kaysan Wade",
