@@ -25,18 +25,19 @@ export const formatTime = (time: Date): string =>
     hour: "numeric",
     minute: "numeric",
     hour12: true,
-    timeZone: "UTC",
   }).format(time);
 
 export const events: Event[] = [
   {
     title: "Dr. Black's Presentation on Machine Learning",
     room: "CHB C316",
-    date: new Date("2024-11-25"),
-    startTime: new Date("2024-11-25T17:30:00"),
-    endTime: new Date("2024-11-25T20:30:00"),
+    date: new Date("2024-11-26"),
+    startTime: new Date("2024-11-26T17:30:00"),
+    endTime: new Date("2024-11-26T20:30:00"),
     text: `Dr. Samuel Black gave us our very first guest speaker presentation. The 
     presentation discussed topics at a high level such as machine learning, neural networks, and functional layers.`,
+    src: "/events/sam-black.jpg",
+    alt: "Dr. Black neural network primer",
   },
   {
     title: "Python Workshop",
