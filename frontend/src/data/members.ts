@@ -35,7 +35,7 @@ const admins: Member[] = [
 const development: Member[] = [
   {
     name: "Daniel Mamuza",
-    role: "Project Coordinator",
+    role: "Officer",
     link: "https://danielmamuza.com",
     src: "/members/daniel_mamuza.webp",
   },
@@ -82,7 +82,7 @@ const outreach: Member[] = [
 
 const members_development: Member[] = [
   {
-    name: "Sebastion Yepez",
+    name: "Sebastian Yepez",
     role: "Workshop Officer",
     link: "https://sebastianyepez.github.io",
     src: "/members/sebastian_yepez.webp",

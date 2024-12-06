@@ -17,6 +17,7 @@ export const formatDate = (date: Date) =>
     month: "short",
     day: "numeric",
     year: "numeric",
+    timeZone: "UTC",
   }).format(date);
 
 export const formatTime = (time: Date): string =>
@@ -24,9 +25,19 @@ export const formatTime = (time: Date): string =>
     hour: "numeric",
     minute: "numeric",
     hour12: true,
+    timeZone: "UTC",
   }).format(time);
 
 export const events: Event[] = [
+  {
+    title: "Dr. Black's Presentation on Machine Learning",
+    room: "CHB C316",
+    date: new Date("2024-11-25"),
+    startTime: new Date("2024-11-25T17:30:00"),
+    endTime: new Date("2024-11-25T20:30:00"),
+    text: `Dr. Samuel Black gave us our very first guest speaker presentation. The 
+    presentation discussed topics at a high level such as machine learning, neural networks, and functional layers.`,
+  },
   {
     title: "Python Workshop",
     room: "SU 208A",
@@ -36,6 +47,8 @@ export const events: Event[] = [
     text: `Join us for a hands-on Python workshop where you can learn essential coding 
     skills, regardless of your experience level. Collaborate with peers and enhance your
      programming knowledge through practical exercises and real-world applications!`,
+    src: "/events/python-workshop.png",
+    alt: "Python Workshop Flyer",
   },
   {
     title: "Club Introduction",

@@ -43,7 +43,7 @@ export const EventCard = ({ event }: EventCardProps) => {
           <img
             src={event.src}
             alt={event.alt}
-            className="w-full h-auto object-cover"
+            className="w-full h-auto object-cover aspect-video"
           />
         )}
       </div>

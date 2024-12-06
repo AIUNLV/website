@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { socials } from "../data/links";
+import { texts } from "../data/texts";
 
 const Navbar = () => {
   return (
@@ -36,6 +38,13 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        <Link
+          className="inline-block bg-white/50 px-8 py-2 border text-sm md:text-base border-black rounded-xl transition-all duration-700 text-black
+            hover:shadow-[0px_50px_100px_-20px_rgba(50,50,93,0.25),_0px_30px_60px_-30px_rgba(0,0,0,0.3),_inset_0px_-2px_6px_0px_rgba(10,37,64,0.35)]"
+          to="/gallery"
+        >
+          {texts.nav.explore_btn}
+        </Link>
         <a
           className="inline-block md:px-8 px-5 py-2 bg-primary rounded-xl hover:drop-shadow-md text-white md:text-base text-sm
         transition-all duration-500 bg-gradient-to-tl from-primary via-red-600 to-primary bg-size-200 bg-pos-0 hover:bg-pos-100"
@@ -43,7 +52,7 @@ const Navbar = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Join us!
+          {texts.nav.join_btn}
         </a>
       </div>
     </nav>

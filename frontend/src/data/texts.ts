@@ -1,4 +1,8 @@
 export const texts = {
+  nav: {
+    explore_btn: "Discover us",
+    join_btn: "Join us!",
+  },
   hero: {
     title: "Innovating AI and Data Science at ",
     gradient: "UNLV",
@@ -7,9 +11,9 @@ export const texts = {
     join_btn: "Join our community",
     explore_btn: "Explore more",
     stats: [
-      { stat: "190", label: "members" },
+      { stat: "200+", label: "members" },
       { stat: "3", label: "projects" },
-      { stat: "10", label: "workshops" },
+      { stat: "3", label: "events" },
     ],
   },
 
