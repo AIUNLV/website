@@ -3,7 +3,14 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 // import reportWebVitals from './reportWebVitals';
+import ReactGA from "react-ga"
 
+const TRACKING_ID = process.env.TRACKING_ID; 
+
+if (TRACKING_ID) {
+  ReactGA.initialize(TRACKING_ID);
+  ReactGA.pageview(window.location.pathname + window.location.search);
+}
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
