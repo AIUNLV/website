@@ -29,6 +29,17 @@ export const formatTime = (time: Date): string =>
 
 export const events: Event[] = [
   {
+    title: "Victor Aldana's Presentation on AI",
+    room: "Philip J. Cohen Theater",
+    date: new Date("2025-01-27"),
+    startTime: new Date("2025-01-27T17:30:00"),
+    endTime: new Date("2025-01-27T20:30:00"),
+    text: `Victor Aldana, a UNLV alumnus and Microsoft employee, shared insights on AI, common pitfalls, and tips for maximizing
+     its potential during his guest talk for the AI & Data Science Club.`,
+    src: "/events/aldana.jpg",
+    alt: "Victor Aldana guest speaker AI presentation",
+  },
+  {
     title: "Dr. Black's Presentation on Machine Learning",
     room: "CHB C316",
     date: new Date("2024-11-26"),
