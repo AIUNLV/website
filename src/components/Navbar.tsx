@@ -47,7 +47,7 @@ const Navbar = () => {
         </Link>
         <a
           className="inline-block md:px-8 px-5 py-2 bg-primary rounded-xl hover:drop-shadow-md text-white md:text-base text-sm
-        transition-all duration-500 bg-gradient-to-tl from-primary via-red-600 to-primary bg-size-200 bg-pos-0 hover:bg-pos-100"
+        transition-all duration-500 bg-gradient-to-tl from-primary via-red-600 to-primary bg-[length:200%_200%] bg-[0%_0%] hover:bg-[100%_100%]"
           href="https://involvementcenter.unlv.edu/organization/aidatascience"
           target="_blank"
           rel="noopener noreferrer"

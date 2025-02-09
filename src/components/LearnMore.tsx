@@ -26,7 +26,7 @@ const LearnMore = () => {
           </div>
           <Link
             className="flex items-center gap-3 rounded-lg p-4 text-white w-36 transition-all duration-500
-        bg-gradient-to-tl from-primary via-red-600 to-primary bg-size-200 bg-pos-0 hover:bg-pos-100"
+        bg-gradient-to-tl from-primary via-red-600 to-primary bg-[length:200%_200%] bg-[0%_0%] hover:bg-[100%_100%]"
             to="/gallery"
           >
             {texts.learnMore.btn}{" "}

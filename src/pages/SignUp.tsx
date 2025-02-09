@@ -5,7 +5,7 @@ import EyeToggle from "../components/EyeToggle";
 const SignUp = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const [confirmPassword, setConfirmPassword] = useState<string>(""); 
+  const [confirmPassword, setConfirmPassword] = useState<string>("");
   const [error, setError] = useState<string>("");
 
   const [isVisible, setIsVisible] = useState(false);
@@ -25,16 +25,15 @@ const SignUp = () => {
       return;
     }
 
-     if (password !== confirmPassword) {
-       setError("Passwords do not match");
-       return;
-     }
-
-    if (password.length < 8){
-       setError("Passwords must be over 8 characters");
+    if (password !== confirmPassword) {
+      setError("Passwords do not match");
       return;
     }
-   
+
+    if (password.length < 8) {
+      setError("Passwords must be over 8 characters");
+      return;
+    }
 
     setError("");
 
@@ -113,7 +112,7 @@ const SignUp = () => {
             <button
               type="submit"
               className="py-4 px-8 rounded-lg text-white transition-all duration-500
-            bg-gradient-to-tl from-primary via-red-600 to-primary bg-size-200 bg-pos-0 hover:bg-pos-100"
+            bg-gradient-to-tl from-primary via-red-600 to-primary bg-[length:200%_200%] bg-[0%_0%] hover:bg-[100%_100%]"
             >
               Create Account
             </button>

@@ -7,10 +7,10 @@ const Login = () => {
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string>("");
 
-  const [isVisible, setIsVisible] = useState(false); 
+  const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
-    setIsVisible(!isVisible); 
+    setIsVisible(!isVisible);
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
@@ -27,8 +27,7 @@ const Login = () => {
     setError("");
 
     // just for testing
-  alert(`Email: ${email}, Password: ${password}`);
-   
+    alert(`Email: ${email}, Password: ${password}`);
 
     // flask backend later
   };
@@ -80,7 +79,7 @@ const Login = () => {
             <button
               type="submit"
               className="py-4 px-8 rounded-lg text-white transition-all duration-500
-            bg-gradient-to-tl from-primary via-red-600 to-primary bg-size-200 bg-pos-0 hover:bg-pos-100"
+            bg-gradient-to-tl from-primary via-red-600 to-primary bg-[length:200%_200%] bg-[0%_0%] hover:bg-[100%_100%]"
             >
               Login
             </button>

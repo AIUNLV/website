@@ -37,7 +37,7 @@ const Hero = () => {
             >
               <a
                 className="inline-block px-8 py-2 text-sm md:text-base rounded-xl text-white 
-            transition-all duration-500 bg-gradient-to-l from-primary via-red-600 to-primary bg-size-200 bg-pos-0 hover:bg-pos-100"
+            transition-all duration-500 bg-gradient-to-l from-primary via-red-600 to-primary bg-[length:200%_200%] bg-[0%_0%] hover:bg-[100%_100%]"
                 href="https://involvementcenter.unlv.edu/organization/aidatascience"
                 target="_blank"
                 rel="noopener noreferrer"
