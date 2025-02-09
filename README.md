@@ -1,72 +1,50 @@
-# Website
+# React + TypeScript + Vite
 
-### Prerequisites
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-- Python 3.x
-- Node.js and npm
+Currently, two official plugins are available:
 
-## Setup 
-### Automated: Use the script 
-- Can run on Mac or Unix systems, for Windows you need WSL to run bash scripts
-```bash
-chmod +x build_run.sh # with WSL or Mac
-./build_run.sh
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+
+- Configure the top-level `parserOptions` property like this:
+
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
 
-### Set Up the Backend (Flask)
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-#### Create Python Virtual Environment
-To keep your dependencies organized, create a virtual environment:
-```bash
-cd backend  
-python3 -m venv .venv
-```
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
 
-#### Activate venv
-Activate the virtual environment with:
-```bash
-# On macOS/Linux
-source .venv/bin/activate
-
-# On Windows
-.venv\Scripts\activate
-```
-
-#### Install Flask and Other Requirements
-Ensure you have a `requirements.txt` file in your `backend` directory with Ïthe necessary dependencies. Then install the requirements:
-```bash
-pip install -r requirements.txt
-```
-
-### Set Up the Frontend (React)
-
-#### Install required dependencies
-Install Node.js dependencies
-```bash
-cd frontend
-npm i
-```
-
-### Build the React App
-Before connecting the React app to Flask, build the production version of the React app:
-```bash
-npm run build
-```
-This will generate the necessary files in the `build` directory.
-
-### Connect Flask and React
-
-#### Run the Flask Server
-Navigate back to the `backend` directory (if you're not there) and run:
-```bash
-python app.py # Windows
-python3 app.py # Mac
-```
-The Flask server will start and serve your React app at `http://localhost:5000/`.
-
-## Other
-### Front End Development
-To just build for the front end with hot reloading navigate to `frontend` and run:
-```bash
-npm start
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
 ```
