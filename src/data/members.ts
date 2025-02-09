@@ -35,7 +35,7 @@ const admins: Member[] = [
 const development: Member[] = [
   {
     name: "Daniel Mamuza",
-    role: "Officer",
+    role: "Webmaster",
     link: "https://danielmamuza.com",
     src: "/members/daniel_mamuza.webp",
   },
@@ -61,12 +61,6 @@ const outreach: Member[] = [
     src: "/members/garrett_prentice.webp",
   },
   {
-    name: "Steven Liang",
-    role: "Social Media Manager",
-    link: "https://linkedin.com/in/steven-liang0000",
-    src: "members/steven_liang.webp",
-  },
-  {
     name: "Daniel Gladstein",
     role: "Outreach Officer",
     link: "https://www.linkedin.com/in/daniel-gladstein-1b1ba0207",
@@ -88,12 +82,6 @@ const members_development: Member[] = [
     src: "/members/sebastian_yepez.webp",
   },
   {
-    name: "Dayanara Reyna",
-    role: "Member Development",
-    link: "https://www.linkedin.com/in/dayanara-reyna",
-    src: "/members/dayanara_reyna.webp",
-  },
-  {
     name: "Narek 'Tony' Tonoyan",
     role: "Member Development",
     link: "https://www.linkedin.com/in/narek-tonoyan-ba9838326/",
@@ -106,7 +94,6 @@ const members_development: Member[] = [
     src: "/AIDataScience_Image.jpg",
   },
 ];
-
 
 // exporting to team component
 export const teams: Team[] = [
