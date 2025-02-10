@@ -9,8 +9,8 @@ import Gallery from "./pages/Gallery";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import NotFound from "./pages/NotFound";
-import Login from "./pages/Login";
-import SignUp from "./pages/SignUp";
+// import Login from "./pages/Login";
+// import SignUp from "./pages/SignUp";
 
 
 const App = () => {

@@ -1,9 +1,8 @@
+import { JSX } from "react";
 import {
   FaBrain,
   FaGlobe,
-  FaPython,
   FaRobot,
-  FaSpinner,
 } from "react-icons/fa6";
 
 export type Project = {

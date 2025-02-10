@@ -33,6 +33,9 @@ importers:
       '@eslint/js':
         specifier: ^9.19.0
         version: 9.20.0
+      '@types/aos':
+        specifier: ^3.0.7
+        version: 3.0.7
       '@types/react':
         specifier: ^19.0.8
         version: 19.0.8
@@ -533,6 +536,9 @@ packages:
     resolution: {integrity: sha512-/i4hjLTUYVjUG0MTUviQP3HR/hzwyzv8Sq4sz2pnsNuf+FIjjhJB0vcnIMH1KIX0k8ozD6CBv2Dl76tlm/JFFA==}
     peerDependencies:
       vite: ^5.2.0 || ^6
+
+  '@types/aos@3.0.7':
+    resolution: {integrity: sha512-sEhyFqvKauUJZDbvAB3Pggynrq6g+2PS4XB3tmUr+mDL1gfDJnwslUC4QQ7/l8UD+LWpr3RxZVR/rHoZrLqZVg==}
 
   '@types/cookie@0.6.0':
     resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}
@@ -1507,6 +1513,8 @@ snapshots:
       lightningcss: 1.29.1
       tailwindcss: 4.0.5
       vite: 6.1.0(jiti@2.4.2)(lightningcss@1.29.1)
+
+  '@types/aos@3.0.7': {}
 
   '@types/cookie@0.6.0': {}
 
