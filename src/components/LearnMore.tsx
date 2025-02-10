@@ -39,17 +39,20 @@ const LearnMore = () => {
               </p>
             </div>
           </div>
-          <Link
+          <div
             data-aos="flip-down"
             data-aos-delay="1000"
             data-aos-duration="750"
-            className="flex items-center gap-3 rounded-lg p-4 text-white w-36 transition-all duration-500
-        bg-gradient-to-tl from-primary via-red-600 to-primary bg-[length:200%_200%] bg-[0%_0%] hover:bg-[100%_100%]"
-            to="/gallery"
           >
-            {texts.learnMore.btn}{" "}
-            <FaArrowRight className="h-4 w-4 text-white" />
-          </Link>
+            <Link
+              className="flex items-center gap-3 rounded-lg p-4 text-white w-36 transition-all duration-500
+        bg-gradient-to-tl from-primary via-red-600 to-primary bg-[length:200%_200%] bg-[0%_0%] hover:bg-[100%_100%]"
+              to="/gallery"
+            >
+              {texts.learnMore.btn}{" "}
+              <FaArrowRight className="h-4 w-4 text-white" />
+            </Link>
+          </div>
         </div>
         <div
           data-aos="fade-up-left"

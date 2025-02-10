@@ -1,6 +1,6 @@
 export const texts = {
   nav: {
-    explore_btn: "Discover us",
+    explore_btn: "Gallery",
     join_btn: "Join us!",
   },
   hero: {
