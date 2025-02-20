@@ -1,10 +1,16 @@
 import { useState, useEffect, useRef } from "react";
-import { EventCard, ProjectCard } from "../components/GalleryCard";
-import { projects } from "../data/projects";
-import { events } from "../data/events";
+import {
+  EventCard,
+  ProjectCard,
+  WorkshopCard,
+} from "../components/GalleryCard";
+import projects from "../data/projects";
+import events from "../data/events";
+import workshops from "../data/workshops";
 
 const Gallery: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("Events");
+  const [prevTab, setPrevTab] = useState<string | null>(null);
 
   const [tabWidth, setTabWidth] = useState<number>(0);
   const [tabLeft, setTabLeft] = useState<number>(0);
@@ -18,7 +24,13 @@ const Gallery: React.FC = () => {
     }
   }, [activeTab]);
 
-  const tabs = ["Events", "Projects"];
+  const handleTabChange = (newTab: string) => {
+    setPrevTab(activeTab);
+    setActiveTab(newTab);
+  };
+
+  const tabs = ["Events", "Projects"]; // hide resources for now
+  // const tabs = ["Events", "Projects", "Resources"];
 
   return (
     <div className="min-h-[85vh]">
@@ -37,9 +49,10 @@ const Gallery: React.FC = () => {
 
           {tabs.map((tab, index) => (
             <button
+              type="button"
               key={index}
               ref={activeTab === tab ? tabRef : null}
-              onClick={() => setActiveTab(tab)}
+              onClick={() => handleTabChange(tab)}
               className={`py-2 px-4 text-base font-medium transition-colors duration-200 rounded-t-md border-b-2 border-transparent
               ${
                 activeTab === tab
@@ -75,7 +88,7 @@ const Gallery: React.FC = () => {
         {activeTab === "Projects" && (
           <section
             className="flex flex-col justify-center items-center mb-10 md:mx-0 mx-10"
-            data-aos="fade-left"
+            data-aos={prevTab == "Events" ? "fade-left" : "fade-right"}
           >
             <h2 className="text-4xl">Projects</h2>
             <h3 className="text-xl text-gray-700 md:text-left text-center">
@@ -85,6 +98,25 @@ const Gallery: React.FC = () => {
               {projects.map((project, index) => (
                 <li key={index} className="h-full w-full">
                   <ProjectCard project={project} />
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {activeTab === "Resources" && (
+          <section
+            className="flex flex-col justify-center items-center mb-10 md:mx-0 mx-10"
+            data-aos="fade-left"
+          >
+            <h2 className="text-4xl">Resources</h2>
+            <h3 className="text-xl text-gray-700 md:text-left text-center">
+              Club resources to continously help you grow!
+            </h3>
+            <ul className="grid md:grid-cols-1 justify-center items-center gap-10 max-w-6xl mt-5">
+              {workshops.map((workshop, index) => (
+                <li key={index} className="h-full w-full">
+                  <WorkshopCard workshop={workshop} />
                 </li>
               ))}
             </ul>

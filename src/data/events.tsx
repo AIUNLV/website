@@ -70,3 +70,5 @@ export const events: Event[] = [
     alt: "First Meeting Photo",
   },
 ];
+
+export default events;
