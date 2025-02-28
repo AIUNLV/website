@@ -55,12 +55,6 @@ const development: Member[] = [
 
 const outreach: Member[] = [
   {
-    name: "Garrett Prentice",
-    role: "Campus Coordinator",
-    link: "https://www.linkedin.com/in/garrettprentice/",
-    src: "/members/garrett_prentice.webp",
-  },
-  {
     name: "Daniel Gladstein",
     role: "Outreach Officer",
     link: "https://www.linkedin.com/in/daniel-gladstein-1b1ba0207",

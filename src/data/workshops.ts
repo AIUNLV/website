@@ -6,6 +6,11 @@ export type Workshop = {
 };
 
 export const workshops: Workshop[] = [
+  {
+    heading: "",
+    subheading: "",
+    href: "",
+  },
 ];
 
 export default workshops;
