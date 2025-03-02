@@ -40,10 +40,10 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                 className="text-white md:h-10 md:w-10 h-5 w-5 transition-none group-hover:animate-bounce delay-200"
               />
             </span>
-            <div className="font-semibold mt-5 text-lg leading-7 transition-all duration-300 group-hover:text-white">
+            <div className="font-semibold mt-5 text-lg leading-7 transition-all duration-300 group-hover:text-white text-left">
               <p>{project.title}</p>
             </div>
-            <div className="mt-2 text-base font-normal transition-all duration-300 group-hover:text-white leading-tight">
+            <div className="mt-2 text-base font-normal transition-all duration-300 group-hover:text-white leading-tight text-left">
               <p>{project.text}</p>
             </div>
           </div>
