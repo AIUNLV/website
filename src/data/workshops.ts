@@ -7,9 +7,9 @@ export type Workshop = {
 
 export const workshops: Workshop[] = [
   {
-    heading: "",
-    subheading: "",
-    href: "",
+    heading: "VS Code + Jupyter Integration",
+    subheading: "Discover how to setup Python & Jupyter Notebooks in VSCode",
+    href: "https://sebastianyepez.github.io/Project_Webpages/ai_workshops/#/workshop1",
   },
 ];
 

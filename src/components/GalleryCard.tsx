@@ -91,6 +91,7 @@ export const WorkshopCard = ({ workshop }: WorkshopCardProps) => {
           </div>
           <a
             href={workshop.href}
+            target="_blank"
             className="inline-block md:px-8 px-5 py-2 bg-primary rounded-xl hover:drop-shadow-md text-white md:text-base text-sm self-start
             transition-all duration-500 bg-gradient-to-b from-primary via-red-600 to-primary bg-[length:200%_200%] bg-[0%_0%] hover:bg-[100%_100%]"
           >

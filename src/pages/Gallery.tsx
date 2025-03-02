@@ -29,8 +29,7 @@ const Gallery: React.FC = () => {
     setActiveTab(newTab);
   };
 
-  const tabs = ["Events", "Projects"]; // hide resources for now
-  // const tabs = ["Events", "Projects", "Resources"];
+  const tabs = ["Events", "Projects", "Resources"];
 
   return (
     <div className="min-h-[85vh]">
