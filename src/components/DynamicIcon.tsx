@@ -13,8 +13,7 @@ const DynamicIcon = ({
   className = "",
 }: DynamicIconProps) => {
   const IconComponent = (FaIcons as Record<string, IconType>)[iconId];
-  console.log(FaIcons as Record<string, IconType>);
-  console.log(IconComponent);
+
   if (!IconComponent) {
     return null;
   }
