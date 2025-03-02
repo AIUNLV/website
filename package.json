@@ -10,12 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.6",
     "@tailwindcss/vite": "^4.0.5",
     "aos": "^2.3.4",
+    "clsx": "^2.1.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.1.5",
+    "tailwind-merge": "^3.0.2",
     "tailwindcss": "^4.0.5"
   },
   "devDependencies": {
