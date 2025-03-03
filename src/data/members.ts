@@ -15,7 +15,7 @@ const admins: Member[] = [
   {
     name: "Athanasios Tassiadamis",
     role: "President",
-    link: "https://www.linkedin.com/in/athanasios-t-8a17b4294",
+    link: "https://atassiad.github.io/",
     src: "/members/athanasios_tassiadamis.webp",
   },
   {

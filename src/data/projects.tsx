@@ -25,7 +25,7 @@ export const projects: Project[] = [
     members: [
       {
         name: "Athanasios Tassiadamis",
-        href: "https://www.linkedin.com/in/athanasios-t-8a17b4294",
+        href: "https://atassiad.github.io/",
       },
       {
         name: "Jadon Whiley",
