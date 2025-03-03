@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import * as FaIcons from "react-icons/fa6";
+import { FaJetFighter, FaBrain, FaRobot, FaGlobe } from "react-icons/fa6";
 
 interface DynamicIconProps {
   iconId: string;
@@ -7,14 +7,22 @@ interface DynamicIconProps {
   className?: string;
 }
 
+const iconsMapping: Record<string, IconType> = {
+  FaJetFighter,
+  FaBrain,
+  FaRobot,
+  FaGlobe,
+};
+
 const DynamicIcon = ({
   iconId,
   size = 24,
   className = "",
 }: DynamicIconProps) => {
-  const IconComponent = (FaIcons as Record<string, IconType>)[iconId];
+  const IconComponent = iconsMapping[iconId];
 
   if (!IconComponent) {
+    console.warn(`Icon "${iconId}" not found in mapping.`);
     return null;
   }
 
