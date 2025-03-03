@@ -1,3 +1,8 @@
+type Member = {
+  name: string;
+  href?: string;
+};
+
 export type Project = {
   title: string;
   text: string;
@@ -5,6 +10,7 @@ export type Project = {
   goal?: string;
   dataset?: string;
   current?: boolean;
+  members?: Member[];
 };
 
 export const projects: Project[] = [
@@ -16,6 +22,20 @@ export const projects: Project[] = [
     dataset:
       "https://www.kaggle.com/datasets/a2015003713/militaryaircraftdetectiondataset",
     current: true,
+    members: [
+      {
+        name: "Athanasios Tassiadamis",
+        href: "https://www.linkedin.com/in/athanasios-t-8a17b4294",
+      },
+      {
+        name: "Jadon Whiley",
+        href: "https://www.linkedin.com/in/jaden-whiley-595061311/",
+      },
+      {
+        name: "Manjot Sandhu",
+        href: "https://www.linkedin.com/in/manjot-sandhu-b4a842290/",
+      },
+    ],
   },
   {
     title: "Brain Tumor Detection",
@@ -24,11 +44,24 @@ export const projects: Project[] = [
     goal: "Achieve at least 90% accuracy with no false negatives.",
     dataset: "https://www.kaggle.com/datasets/ultralytics/brain-tumor/data",
     current: true,
+    members: [
+      {
+        name: "Teddy Lieber",
+        href: "https://www.linkedin.com/in/theodore-lieber-13bb16211/",
+      },
+    ],
   },
   {
     title: "'Skald' - Discord Bot",
     text: "Our very own Discord Bot developed by Teddy Lieber that helps out on our server.",
     icon: "FaRobot",
+    current: true,
+    members: [
+      {
+        name: "Teddy Lieber",
+        href: "https://www.linkedin.com/in/theodore-lieber-13bb16211/",
+      },
+    ],
   },
   // {
   //   title: "Machine Learning Model",
@@ -39,8 +72,15 @@ export const projects: Project[] = [
   // },
   {
     title: "Club Website",
-    text: "The current website you're on, built with React on the front end and Flask for the backend.",
+    text: "The current website you're on, built with React, Tailwind CSS, and Vite.",
     icon: "FaGlobe",
+    current: true,
+    members: [
+      {
+        name: "Daniel Mamuza",
+        href: "https://danielmamuza.com",
+      },
+    ],
   },
 ];
 

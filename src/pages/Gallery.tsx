@@ -1,12 +1,11 @@
 import { useState, useEffect, useRef } from "react";
-import {
-  EventCard,
-  ProjectCard,
-  WorkshopCard,
-} from "../components/GalleryCard";
+
 import projects from "../data/projects";
 import events from "../data/events";
 import workshops from "../data/workshops";
+import { EventCard } from "../components/EventCard";
+import { ProjectCard } from "../components/ProjectCard";
+import { WorkshopCard } from "../components/WorkshopCard";
 
 const Gallery: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("Events");
@@ -93,7 +92,10 @@ const Gallery: React.FC = () => {
             <h3 className="text-xl text-gray-700 md:text-left text-center">
               The projects the club is actively working on!
             </h3>
-            <ul className="grid md:grid-cols-3 justify-center items-center gap-10 max-w-6xl mt-5">
+            <h5 className="text-gray-400 md:text-left text-center">
+              Click on the project card for more information
+            </h5>
+            <ul className="grid md:grid-cols-3 justify-center items-center gap-10 max-w-6xl mt-5 mx-4">
               {projects.map((project, index) => (
                 <li key={index} className="h-full w-full">
                   <ProjectCard project={project} />
