@@ -46,6 +46,18 @@ export const projects: Project[] = [
     current: true,
     members: [
       {
+        name: "Jared Smith",
+        href: "https://www.linkedin.com/in/jaredashaunsmith/",
+      },
+      {
+        name: "Jonah Lewis",
+        href: "https://www.linkedin.com/in/jonah-lewis-four/",
+      },
+      {
+        name: "Minting Xu",
+        href: "https://www.linkedin.com/in/minting-xu-11a07b2b5/",
+      },
+      {
         name: "Teddy Lieber",
         href: "https://www.linkedin.com/in/theodore-lieber-13bb16211/",
       },
