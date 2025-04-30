@@ -29,6 +29,16 @@ export const formatTime = (time: Date): string =>
 
 export const events: Event[] = [
   {
+    title: "Making & Breaking AI Agents",
+    room: "AEB 150",
+    date: new Date("2025-04-23"),
+    startTime: new Date("2025-04-23T17:30:00"),
+    endTime: new Date("2025-04-23T19:30:00"),
+    text: `We’ll be diving into how AI agents work—how to build them, how they fail, and how to safely and ethically break them on purpose.`,
+    src: "/events/agents.jpg",
+    alt: "The speakers for the Making & Breaking AI Agents event",
+  },
+  {
     title: "Victor Aldana's Presentation on AI",
     room: "Philip J. Cohen Theater",
     date: new Date("2025-01-27"),
