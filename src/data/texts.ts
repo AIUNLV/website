@@ -11,9 +11,9 @@ export const texts = {
     join_btn: "Join our community",
     explore_btn: "Explore more",
     stats: [
-      { stat: "200+", label: "members" },
-      { stat: "3", label: "projects" },
-      { stat: "3", label: "events" },
+      { stat: "300+", label: "members" },
+      { stat: "5", label: "projects" },
+      { stat: "10", label: "events" },
     ],
   },
 

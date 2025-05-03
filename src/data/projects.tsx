@@ -64,7 +64,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "'Skald' - Discord Bot",
+    title: "'Merlin' - Discord Bot",
     text: "Our very own Discord Bot with its own badge, attendance, and quest system.",
     icon: "FaRobot",
     current: true,

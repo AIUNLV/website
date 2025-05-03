@@ -55,6 +55,12 @@ const development: Member[] = [
 
 const outreach: Member[] = [
   {
+    name: "Krystka Mariano",
+    role: "Public Relations",
+    link: "https://www.linkedin.com/in/krystka-mariano/",
+    src: "/members/krystka_mariano.webp",
+  },
+  {
     name: "Daniel Gladstein",
     role: "Outreach Officer",
     link: "https://www.linkedin.com/in/daniel-gladstein-1b1ba0207",
