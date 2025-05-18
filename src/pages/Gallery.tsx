@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 
 import projects from "../data/projects";
 import events from "../data/events";
@@ -8,7 +9,10 @@ import { ProjectCard } from "../components/ProjectCard";
 import { WorkshopCard } from "../components/WorkshopCard";
 
 const Gallery: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>("Events");
+  const location = useLocation();
+  const initialTab = location.state?.activeTab || "Events";
+  
+  const [activeTab, setActiveTab] = useState<string>(initialTab);
   const [prevTab, setPrevTab] = useState<string | null>(null);
 
   const [tabWidth, setTabWidth] = useState<number>(0);
@@ -22,6 +26,16 @@ const Gallery: React.FC = () => {
       setTabLeft(tabRef.current.offsetLeft);
     }
   }, [activeTab]);
+
+  // Handle location state changes
+  useEffect(() => {
+    if (location.state?.activeTab) {
+      setPrevTab(activeTab);
+      setActiveTab(location.state.activeTab);
+      // Clear the state after using it
+      window.history.replaceState({}, document.title);
+    }
+  }, [location.state, activeTab]);
 
   const handleTabChange = (newTab: string) => {
     setPrevTab(activeTab);

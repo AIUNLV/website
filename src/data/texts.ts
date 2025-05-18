@@ -32,6 +32,12 @@ export const texts = {
     btn: "Learn more",
   },
 
+  recentProjects: {
+    title: "Recent Projects",
+    subtitle: "Check out our latest projects",
+    btn: "View all projects",
+  },
+
   footer: {
     text: `
     Welcome to UNLV's AI and Data Science club, a passionate community of students and professionals of all skill

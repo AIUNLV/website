@@ -99,7 +99,7 @@ const members_development: Member[] = [
 export const teams: Team[] = [
   {
     id: "admin",
-    name: "Adminstrative",
+    name: "Administrative",
     members: admins,
   },
   {
