@@ -11,7 +11,7 @@ import { WorkshopCard } from "../components/WorkshopCard";
 const Gallery: React.FC = () => {
   const location = useLocation();
   const initialTab = location.state?.activeTab || "Events";
-  
+
   const [activeTab, setActiveTab] = useState<string>(initialTab);
   const [prevTab, setPrevTab] = useState<string | null>(null);
 
@@ -32,10 +32,10 @@ const Gallery: React.FC = () => {
     if (location.state?.activeTab) {
       setPrevTab(activeTab);
       setActiveTab(location.state.activeTab);
-      // Clear the state after using it
       window.history.replaceState({}, document.title);
     }
-  }, [location.state, activeTab]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.state]);
 
   const handleTabChange = (newTab: string) => {
     setPrevTab(activeTab);
