@@ -59,7 +59,7 @@ const Hero = () => {
               </Link>
             </span>
           </div>
-          <div className="flex" data-aos-id-stats>
+          <div className="flex justify-center md:justify-start" data-aos-id-stats>
             {texts.hero.stats.map((stat, index) => (
               <div
                 key={index}

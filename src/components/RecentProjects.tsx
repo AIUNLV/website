@@ -17,7 +17,7 @@ const RecentProjects = () => {
           >
             {texts.recentProjects.title}
           </h1>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 md:flex-row flex-col">
             <h2
               className="leading-8 font-bold text-4xl max-w-sm"
               data-aos="fade-up"
@@ -47,7 +47,7 @@ const RecentProjects = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-4 justify-center items-center">
           {projects.slice(0, 3).map((project, index) => (
             <div key={index} data-aos="fade-up" data-aos-delay={index * 150}>
               <ProjectCard project={project} />
