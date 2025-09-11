@@ -1,4 +1,4 @@
-import { Member } from "../data/members";
+import { Member } from "~/data/members";
 
 interface TeamCardProps {
   member: Member;

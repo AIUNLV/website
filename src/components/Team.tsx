@@ -1,4 +1,4 @@
-import { teams } from "../data/members";
+import { teams } from "~/data/members";
 import TeamCard from "./TeamCard";
 
 const Team = () => {

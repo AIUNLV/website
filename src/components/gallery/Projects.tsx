@@ -1,6 +1,6 @@
 
-import { Project } from "../../data/projects";
-import { ProjectCard } from "../ProjectCard";
+import { Project } from "~/data/projects";
+import { ProjectCard } from "~/components/ProjectCard";
 
 interface ProjectsProps {
   projects: Project[];

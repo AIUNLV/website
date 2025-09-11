@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
-import { texts } from "../data/texts";
+import { texts } from "~/data/texts";
 
 const LearnMore = () => {
   return (

@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
-import projects from "../data/projects";
-import events from "../data/events";
-import workshops from "../data/workshops";
-import { Events } from "../components/gallery/Events";
-import { Projects } from "../components/gallery/Projects";
-import { Resources } from "../components/gallery/Resources";
+import projects from "~/data/projects";
+import events from "~/data/events";
+import workshops from "~/data/workshops";
+import { Events } from "~/components/gallery/Events";
+import { Projects } from "~/components/gallery/Projects";
+import { Resources } from "~/components/gallery/Resources";
 
 const Gallery: React.FC = () => {
   const location = useLocation();

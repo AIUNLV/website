@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaLink } from "react-icons/fa6";
-import { Event, formatTime, formatDate } from "../../data/events";
+import { Event, formatTime, formatDate } from "~/data/events";
 
 interface EventCardProps {
   event: Event;

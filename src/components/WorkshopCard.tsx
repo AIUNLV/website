@@ -1,4 +1,4 @@
-import { Workshop } from "../data/workshops";
+import { Workshop } from "~/data/workshops";
 
 interface WorkshopCardProps {
   workshop: Workshop;

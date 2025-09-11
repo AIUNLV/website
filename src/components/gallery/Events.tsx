@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
-import { Event } from "../../data/events";
+import { Event } from "~/data/events";
 import { EventCard } from "./EventCard";
 
 interface EventsProps {

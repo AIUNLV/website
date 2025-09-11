@@ -1,5 +1,5 @@
-import { texts } from "../data/texts";
-import { projects } from "../data/projects";
+import { texts } from "~/data/texts";
+import { projects } from "~/data/projects";
 import { ProjectCard } from "./ProjectCard";
 import { Link } from "react-router-dom";
 

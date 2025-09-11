@@ -1,5 +1,5 @@
-import { Workshop } from "../../data/workshops";
-import { WorkshopCard } from "../WorkshopCard";
+import { Workshop } from "~/data/workshops";
+import { WorkshopCard } from "~/components/WorkshopCard";
 
 interface ResourcesProps {
   workshops: Workshop[];

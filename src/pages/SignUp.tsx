@@ -1,6 +1,6 @@
 import { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
-import EyeToggle from "../components/EyeToggle";
+import EyeToggle from "~/components/EyeToggle";
 
 const SignUp = () => {
   const [email, setEmail] = useState<string>("");

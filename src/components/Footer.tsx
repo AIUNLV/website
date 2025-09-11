@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { links, socials } from "../data/links";
-import { texts } from "../data/texts";
+import { links, socials } from "~/data/links";
+import { texts } from "~/data/texts";
 
 const Footer = () => {
   return (

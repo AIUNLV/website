@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { texts } from "../data/texts";
+import { texts } from "~/data/texts";
 
 const Hero = () => {
   return (
