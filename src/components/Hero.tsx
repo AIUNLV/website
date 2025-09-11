@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { texts } from "~/data/texts";
 
 const Hero = () => {
@@ -53,13 +53,16 @@ const Hero = () => {
               <Link
                 className="inline-block px-8 py-2 border text-sm md:text-base border-black rounded-xl transition-all duration-700 text-black
             hover:shadow-[0px_50px_100px_-20px_rgba(50,50,93,0.25),_0px_30px_60px_-30px_rgba(0,0,0,0.3),_inset_0px_-2px_6px_0px_rgba(10,37,64,0.35)]"
-                to="/gallery"
+                href="/gallery"
               >
                 {texts.hero.explore_btn}
               </Link>
             </span>
           </div>
-          <div className="flex justify-center md:justify-start" data-aos-id-stats>
+          <div
+            className="flex justify-center md:justify-start"
+            data-aos-id-stats
+          >
             {texts.hero.stats.map((stat, index) => (
               <div
                 key={index}

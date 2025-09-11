@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -14,7 +12,7 @@ module.exports = {
         "size-200": "200% 200%",
       },
       backgroundImage: {
-        'radial-primary': 'radial-gradient(circle, var(--tw-gradient-stops))',
+        "radial-primary": "radial-gradient(circle, var(--tw-gradient-stops))",
       },
       backgroundPosition: {
         "pos-0": "0% 0%",

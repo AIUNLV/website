@@ -1,7 +1,7 @@
 import { texts } from "~/data/texts";
 import { projects } from "~/data/projects";
-import { ProjectCard } from "./ProjectCard";
-import { Link } from "react-router-dom";
+import { ProjectCard } from "~/components/gallery/ProjectCard";
+import Link from "next/link";
 
 const RecentProjects = () => {
   return (
@@ -36,10 +36,7 @@ const RecentProjects = () => {
               <Link
                 className="flex w-full items-center gap-3 rounded-lg p-4 text-white transition-all duration-500
         bg-gradient-to-tl from-primary via-red-600 to-primary bg-[length:200%_200%] bg-[0%_0%] hover:bg-[100%_100%]"
-                to="/gallery"
-                state={{
-                  activeTab: "Projects",
-                }}
+                href={{ pathname: "/gallery", query: { tab: "Projects" } }}
               >
                 {texts.recentProjects.btn}
               </Link>

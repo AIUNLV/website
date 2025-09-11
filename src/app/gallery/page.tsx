@@ -1,5 +1,7 @@
+"use client";
+
 import { useState, useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 import projects from "~/data/projects";
 import events from "~/data/events";
@@ -8,9 +10,11 @@ import { Events } from "~/components/gallery/Events";
 import { Projects } from "~/components/gallery/Projects";
 import { Resources } from "~/components/gallery/Resources";
 
-const Gallery: React.FC = () => {
-  const location = useLocation();
-  const initialTab = location.state?.activeTab || "Events";
+export default function GalleryPage() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+  const initialTab = searchParams?.get("tab") || "Events";
 
   const [activeTab, setActiveTab] = useState<string>(initialTab);
   const [prevTab, setPrevTab] = useState<string | null>(null);
@@ -19,7 +23,6 @@ const Gallery: React.FC = () => {
   const [tabLeft, setTabLeft] = useState<number>(0);
   const tabRef = useRef<HTMLButtonElement | null>(null);
 
-  // based on current tab change div
   useEffect(() => {
     if (tabRef.current) {
       setTabWidth(tabRef.current.offsetWidth);
@@ -27,20 +30,24 @@ const Gallery: React.FC = () => {
     }
   }, [activeTab]);
 
-  // Handle location state changes
-  useEffect(() => {
-    if (location.state?.activeTab) {
-      setPrevTab(activeTab);
-      setActiveTab(location.state.activeTab);
-      window.history.replaceState({}, document.title);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location.state]);
-
   const handleTabChange = (newTab: string) => {
     setPrevTab(activeTab);
     setActiveTab(newTab);
+
+    const params = new URLSearchParams(Array.from(searchParams.entries()));
+    params.set("tab", newTab);
+    router.push(`${pathname}?${params.toString()}`, { scroll: false });
   };
+
+  // keep state in sync when the URL changes
+  useEffect(() => {
+    const tabFromUrl = searchParams.get("tab") || "Events";
+    if (tabFromUrl !== activeTab) {
+      setPrevTab(activeTab);
+      setActiveTab(tabFromUrl);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
 
   const tabs = ["Events", "Projects", "Resources"];
 
@@ -49,7 +56,6 @@ const Gallery: React.FC = () => {
       <main className="pt-32 pb-5 flex flex-col justify-center items-center space-y-10 md:mx-0 mx-10 ">
         <h1 className="md:text-6xl text-5xl">Club Gallery</h1>
         <div className="relative flex justify-center mb-4">
-          {/* underline border div */}
           <div
             className="absolute h-0.5 bg-primary transition-all ease-in-out duration-500"
             style={{
@@ -80,12 +86,12 @@ const Gallery: React.FC = () => {
       <div className="overflow-hidden">
         {activeTab === "Events" && <Events events={events} />}
 
-        {activeTab === "Projects" && <Projects projects={projects} prevTab={prevTab} />}
+        {activeTab === "Projects" && (
+          <Projects projects={projects} prevTab={prevTab} />
+        )}
 
         {activeTab === "Resources" && <Resources workshops={workshops} />}
       </div>
     </div>
   );
-};
-
-export default Gallery;
+}

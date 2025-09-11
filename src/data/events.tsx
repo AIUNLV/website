@@ -111,4 +111,3 @@ export const events: Event[] = [
 ];
 
 export default events;
-

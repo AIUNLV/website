@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { socials } from "../data/links";
 import { texts } from "../data/texts";
 import {
@@ -6,7 +6,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "./DropdownMenu";
+} from "~/components/ui/DropdownMenu";
 
 const Navbar = () => {
   return (
@@ -82,10 +82,7 @@ const GalleryDropdown = () => {
         {galleryMenuItems.map((item) => (
           <DropdownMenuItem key={item.label} asChild>
             <Link
-              to={item.path}
-              state={{
-                activeTab: item.activeTab,
-              }}
+              href={{ pathname: item.path, query: { tab: item.activeTab } }}
               className="flex items-center px-3 py-2 text-sm text-black hover:bg-black/5 rounded-lg transition-colors"
             >
               {item.label}

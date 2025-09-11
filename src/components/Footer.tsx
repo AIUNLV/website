@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { links, socials } from "~/data/links";
 import { texts } from "~/data/texts";
 
@@ -23,7 +23,7 @@ const Footer = () => {
               <li key={index} className="text-sm">
                 <Link
                   className="group inline-block transition duration-300 px-2 py-1"
-                  to={link.href}
+                  href={link.href}
                 >
                   {link.name}
                   <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-primary" />

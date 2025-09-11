@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { Project } from "~/data/projects";
 import {
@@ -7,8 +9,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "./Dialog";
-import DynamicIcon from "./DynamicIcon";
+} from "~/components/ui/Dialog";
+import DynamicIcon from "~/components/ui/DynamicIcon";
 
 interface ProjectCardProps {
   project: Project;

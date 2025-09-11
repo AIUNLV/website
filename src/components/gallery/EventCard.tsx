@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { FaLink } from "react-icons/fa6";
 import { Event, formatTime, formatDate } from "~/data/events";
 
@@ -38,15 +37,15 @@ export const EventCard = ({ event }: EventCardProps) => {
         )}
         <p className="leading-tight mb-4 text-sm">{event.text}</p>
         {event.link?.url && (
-          <Link
-            to={event.link?.url}
+          <a
+            href={event.link?.url}
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary border rounded-xl px-3 py-2 flex items-center gap-1 w-fit hover:shadow-sm transition-all"
           >
             <FaLink />
             {event.link?.text}
-          </Link>
+          </a>
         )}
       </div>
     </div>
