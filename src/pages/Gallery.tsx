@@ -4,9 +4,9 @@ import { useLocation } from "react-router-dom";
 import projects from "../data/projects";
 import events from "../data/events";
 import workshops from "../data/workshops";
-import { EventCard } from "../components/EventCard";
-import { ProjectCard } from "../components/ProjectCard";
-import { WorkshopCard } from "../components/WorkshopCard";
+import { Events } from "../components/gallery/Events";
+import { Projects } from "../components/gallery/Projects";
+import { Resources } from "../components/gallery/Resources";
 
 const Gallery: React.FC = () => {
   const location = useLocation();
@@ -78,65 +78,11 @@ const Gallery: React.FC = () => {
         </div>
       </main>
       <div className="overflow-hidden">
-        {activeTab === "Events" && (
-          <section
-            className="flex flex-col justify-center items-center mb-10 md:mx-0 mx-10"
-            data-aos="fade-right"
-          >
-            <h2 className="text-4xl">Events</h2>
-            <h3 className="text-xl text-gray-700 md:text-left text-center">
-              Join us for workshops, talks, and more!
-            </h3>
-            <ul className="grid md:grid-cols-2 justify-center items-center gap-10 max-w-6xl mt-5">
-              {events.map((event, index) => (
-                <li key={index} className="h-full w-full">
-                  <EventCard event={event} />
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
+        {activeTab === "Events" && <Events events={events} />}
 
-        {activeTab === "Projects" && (
-          <section
-            className="flex flex-col justify-center items-center mb-10 md:mx-0 mx-10"
-            data-aos={prevTab == "Events" ? "fade-left" : "fade-right"}
-          >
-            <h2 className="text-4xl">Projects</h2>
-            <h3 className="text-xl text-gray-700 md:text-left text-center">
-              The projects the club is actively working on!
-            </h3>
-            <h5 className="text-gray-400 md:text-left text-center">
-              Click on the project card for more information
-            </h5>
-            <ul className="grid md:grid-cols-3 justify-center items-center gap-10 max-w-6xl mt-5 mx-4">
-              {projects.map((project, index) => (
-                <li key={index} className="h-full w-full">
-                  <ProjectCard project={project} />
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
+        {activeTab === "Projects" && <Projects projects={projects} prevTab={prevTab} />}
 
-        {activeTab === "Resources" && (
-          <section
-            className="flex flex-col justify-center items-center mb-10 md:mx-0 mx-10"
-            data-aos="fade-left"
-          >
-            <h2 className="text-4xl">Resources</h2>
-            <h3 className="text-xl text-gray-700 md:text-left text-center">
-              Club resources to continously help you grow!
-            </h3>
-            <ul className="grid md:grid-cols-1 justify-center items-center gap-10 max-w-6xl mt-5">
-              {workshops.map((workshop, index) => (
-                <li key={index} className="h-full w-full">
-                  <WorkshopCard workshop={workshop} />
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
+        {activeTab === "Resources" && <Resources workshops={workshops} />}
       </div>
     </div>
   );

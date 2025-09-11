@@ -10,6 +10,10 @@ export type Event = {
 
   src?: string;
   alt?: string;
+  link?: {
+    text: string;
+    url: string;
+  };
 };
 
 export const formatDate = (date: Date) =>
@@ -27,7 +31,32 @@ export const formatTime = (time: Date): string =>
     hour12: true,
   }).format(time);
 
+// TODO :: please make into db and remove this lol
 export const events: Event[] = [
+  {
+    title: "Dr. La Plante's Presentation",
+    room: "AEB 150",
+    date: new Date("2025-10-15"),
+    startTime: new Date("2025-10-15T17:30:00"),
+    endTime: new Date("2025-10-15T19:30:00"),
+    text: `Dr. La Plante will be sharing and presenting more about his research and UNLV research initiatives.`,
+    // src: "/events/10-15-25.webp",
+    // alt: "Dr. La Plante's Presentation Poster",
+  },
+  {
+    title: "Intro to Research",
+    room: "AEB 150",
+    date: new Date("2025-09-10"),
+    startTime: new Date("2025-09-10T17:30:00"),
+    endTime: new Date("2025-09-10T19:30:00"),
+    text: `Come learn how to get started with research and explore opportunities in AI & Data Science!`,
+    src: "/events/09-10-25.webp",
+    alt: "Intro to Research Poster",
+    link: {
+      text: "Presentation",
+      url: "https://docs.google.com/presentation/d/1aB3rFcO4bMk0Zjj74gPO8ycL93-wowqppY6sk6DCNA4",
+    },
+  },
   {
     title: "Making & Breaking AI Agents",
     room: "AEB 150",
@@ -82,3 +111,4 @@ export const events: Event[] = [
 ];
 
 export default events;
+

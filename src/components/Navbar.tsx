@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import { socials } from "../data/links";
 import { texts } from "../data/texts";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./DropdownMenu";
 
 const Navbar = () => {
   return (
@@ -38,13 +44,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <Link
-          className="inline-block bg-white/50 px-8 py-2 border text-sm md:text-base border-black rounded-xl transition-all duration-700 text-black
-            hover:shadow-[0px_50px_100px_-20px_rgba(50,50,93,0.25),_0px_30px_60px_-30px_rgba(0,0,0,0.3),_inset_0px_-2px_6px_0px_rgba(10,37,64,0.35)]"
-          to="/gallery"
-        >
-          {texts.nav.explore_btn}
-        </Link>
+        <GalleryDropdown />
         <a
           className="inline-block md:px-8 px-5 py-2 bg-primary rounded-xl hover:drop-shadow-md text-white md:text-base text-sm
         transition-all duration-500 bg-gradient-to-tl from-primary via-red-600 to-primary bg-[length:200%_200%] bg-[0%_0%] hover:bg-[100%_100%]"
@@ -60,3 +60,43 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+const GalleryDropdown = () => {
+  const galleryMenuItems = [
+    { label: "Events", activeTab: "Events", path: "/gallery?tab=events" },
+    { label: "Projects", activeTab: "Projects", path: "/gallery?tab=projects" },
+    {
+      label: "Resources",
+      activeTab: "Resources",
+      path: "/gallery?tab=resources",
+    },
+  ];
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <button
+          className="inline-block bg-white/50 px-8 py-2 border text-sm md:text-base border-black rounded-xl transition-all duration-700 text-black
+            hover:shadow-[0px_50px_100px_-20px_rgba(50,50,93,0.25),_0px_30px_60px_-30px_rgba(0,0,0,0.3),_inset_0px_-2px_6px_0px_rgba(10,37,64,0.35)]"
+        >
+          {texts.nav.explore_btn}
+        </button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="w-48 bg-white/95 backdrop-blur-md border border-black/20 shadow-xl rounded-xl">
+        {galleryMenuItems.map((item) => (
+          <DropdownMenuItem key={item.label} asChild>
+            <Link
+              to={item.path}
+              state={{
+                activeTab: item.activeTab,
+              }}
+              className="flex items-center px-3 py-2 text-sm text-black hover:bg-black/5 rounded-lg transition-colors"
+            >
+              {item.label}
+            </Link>
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+};
