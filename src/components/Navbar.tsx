@@ -63,13 +63,9 @@ export default Navbar;
 
 const GalleryDropdown = () => {
   const galleryMenuItems = [
-    { label: "Events", activeTab: "Events", path: "/gallery?tab=events" },
-    { label: "Projects", activeTab: "Projects", path: "/gallery?tab=projects" },
-    {
-      label: "Resources",
-      activeTab: "Resources",
-      path: "/gallery?tab=resources",
-    },
+    { label: "Events", activeTab: "Events", path: "/gallery" },
+    { label: "Projects", activeTab: "Projects", path: "/gallery" },
+    { label: "Resources", activeTab: "Resources", path: "/gallery" },
   ];
 
   return (
