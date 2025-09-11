@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { Suspense, useState, useEffect, useRef } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 import projects from "~/data/projects";
@@ -10,7 +10,7 @@ import { Events } from "~/components/gallery/Events";
 import { Projects } from "~/components/gallery/Projects";
 import { Resources } from "~/components/gallery/Resources";
 
-export default function GalleryPage() {
+function GalleryClient() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -93,5 +93,13 @@ export default function GalleryPage() {
         {activeTab === "Resources" && <Resources workshops={workshops} />}
       </div>
     </div>
+  );
+}
+
+export default function GalleryPage() {
+  return (
+    <Suspense fallback={<div className="min-h-[85vh]" />}> 
+      <GalleryClient />
+    </Suspense>
   );
 }
