@@ -32,6 +32,17 @@ export const texts = {
     btn: "Learn more",
   },
 
+  schedule: {
+    title: "Fall 2025 Schedule",
+    subtitle: "Join Us for Workshops, Talks, and Projects",
+    img: {
+      src: "/schedule.png",
+      alt: "Fall 2025 Schedule",
+      width: 1813,
+      height: 1167,
+    },
+  },
+
   recentProjects: {
     title: "Recent Projects",
     subtitle: "Check out our latest projects",

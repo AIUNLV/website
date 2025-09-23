@@ -7,6 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "~/components/ui/DropdownMenu";
+import { ScheduleLink } from "./Schedule";
 
 const Navbar = () => {
   return (
@@ -43,6 +44,9 @@ const Navbar = () => {
               </a>
             </li>
           ))}
+          <li>
+            <ScheduleLink />
+          </li>
         </ul>
         <GalleryDropdown />
         <a
