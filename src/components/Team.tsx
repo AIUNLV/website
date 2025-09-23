@@ -3,7 +3,10 @@ import TeamCard from "./TeamCard";
 
 const Team = () => {
   return (
-    <section className="mt-10 pb-16 text-center flex flex-col justify-center bg-gradient-to-b from-white to-gray-300">
+    <section
+      className="mt-10 pb-16 text-center flex flex-col justify-center bg-gradient-to-b from-white to-gray-300"
+      id="team"
+    >
       <h2 className="text-3xl font-semibold mb-4">Our Team</h2>
       <div className="bg-gray-300/30 mx-10 md:mx-auto md:px-10 px-5 pt-10 rounded-3xl backdrop-blur-sm">
         {teams.map((team, i) => (

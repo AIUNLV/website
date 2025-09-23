@@ -4,7 +4,10 @@ import { texts } from "~/data/texts";
 
 const LearnMore = () => {
   return (
-    <div className="bg-gradient-to-t from-white to-gray-400 md:px-0 px-10">
+    <div
+      className="bg-gradient-to-t from-white to-gray-400 md:px-0 px-10"
+      id="learnMore"
+    >
       <div
         className="flex flex-col md:flex-row items-center justify-center
         gap-16 md:py-24 py-10 px-auto mx-auto max-w-screen-xl"

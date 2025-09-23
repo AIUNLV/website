@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const RecentProjects = () => {
   return (
-    <div className="bg-background md:px-0 px-10">
+    <div className="bg-background md:px-0 px-10" id="recentProjects">
       <div
         className="flex flex-col items-center justify-center
         gap-16 md:py-24 py-10 px-auto mx-auto max-w-screen-xl"
