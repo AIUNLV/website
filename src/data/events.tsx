@@ -50,8 +50,8 @@ export const events: Event[] = [
     startTime: new Date("2025-10-01T17:30:00"),
     endTime: new Date("2025-10-01T19:30:00"),
     text: ``,
-    src: "",
-    alt: "",
+    src: "events/10-01-25.webp",
+    alt: "Dr. Black poster",
   },
   {
     title: "DS and ML in the Casino, Austin Moss from Gaming Analytics",
