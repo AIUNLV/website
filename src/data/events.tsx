@@ -56,9 +56,9 @@ export const events: Event[] = [
   {
     title: "DS and ML in the Casino, Austin Moss from Gaming Analytics",
     room: "AEB 150",
-    date: new Date("2025-10-15"),
-    startTime: new Date("2025-10-15T17:30:00"),
-    endTime: new Date("2025-10-15T19:30:00"),
+    date: new Date("2025-10-08"),
+    startTime: new Date("2025-10-08T17:30:00"),
+    endTime: new Date("2025-10-08T19:30:00"),
     text: ``,
     src: "",
     alt: "",
