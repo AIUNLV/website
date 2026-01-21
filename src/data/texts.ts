@@ -33,13 +33,13 @@ export const texts = {
   },
 
   schedule: {
-    title: "Fall 2025 Schedule",
-    subtitle: "Join Us for Workshops, Talks, and Projects",
+    title: "Spring 2026 Schedule",
+    subtitle: "Upcoming",
     img: {
-      src: "/schedule.png",
-      alt: "Fall 2025 Schedule",
-      width: 1813,
-      height: 1167,
+      src: "",
+      alt: "Spring 2026 Schedule",
+      width: 0,
+      height: 0,
     },
   },
 

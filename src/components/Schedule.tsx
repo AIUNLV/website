@@ -34,13 +34,13 @@ const Schedule = () => {
           data-aos-delay="150"
           data-aos-duration="800"
         >
-          <ImageViewer
-            src={texts.schedule.img.src}
-            alt={texts.schedule.img.alt}
-            width={texts.schedule.img.width / 2}
-            height={texts.schedule.img.height / 2}
-            title={texts.schedule.title}
-          />
+          {/* <ImageViewer */}
+          {/*   src={texts.schedule.img.src} */}
+          {/*   alt={texts.schedule.img.alt} */}
+          {/*   width={texts.schedule.img.width / 2} */}
+          {/*   height={texts.schedule.img.height / 2} */}
+          {/*   title={texts.schedule.title} */}
+          {/* /> */}
         </div>
       </div>
     </div>

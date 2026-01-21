@@ -44,9 +44,9 @@ const Navbar = () => {
               </a>
             </li>
           ))}
-          <li>
-            <ScheduleLink />
-          </li>
+          {/* <li> */}
+          {/*   <ScheduleLink /> */}
+          {/* </li> */}
         </ul>
         <GalleryDropdown />
         <a

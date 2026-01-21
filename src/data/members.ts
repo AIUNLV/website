@@ -13,16 +13,16 @@ export type Team = {
 
 const admins: Member[] = [
   {
-    name: "Athanasios Tassiadamis",
+    name: "Teddy Lieber",
     role: "President",
-    link: "https://atassiad.github.io/",
-    src: "/members/athanasios_tassiadamis.webp",
+    link: "https://www.linkedin.com/in/theodore-lieber-13bb16211/",
+    src: "/members/teddy_lieber.jpeg",
   },
   {
-    name: "Faris Atout",
+    name: "Sebastian Yepez",
     role: "Vice President",
-    link: "https://www.linkedin.com/in/farisatout/",
-    src: "/members/faris_atout.webp",
+    link: "https://sebastianyepez.github.io",
+    src: "/members/sebastian_yepez.webp",
   },
   {
     name: "Micaela Benavidez-Sosa",
@@ -39,48 +39,36 @@ const development: Member[] = [
     link: "https://danielmamuza.com",
     src: "/members/daniel_mamuza.webp",
   },
-  {
-    name: "Teddy Lieber",
-    role: "Officer",
-    link: "https://www.linkedin.com/in/theodore-lieber-13bb16211/",
-    src: "/members/teddy_lieber.webp",
-  },
-  {
-    name: "John Kim",
-    role: "Officer",
-    link: "https://www.linkedin.com/in/john-kim-profile/",
-    src: "/members/john_kim.webp",
-  },
 ];
 
 const outreach: Member[] = [
+  {
+    name: "Milaan Shah",
+    role: "Officer",
+    link: "https://www.linkedin.com/in/milaan-shah-47248731b/",
+    src: "/members/milaan_shah.png",
+  },
+  {
+    name: "Vanshdeep 'Vansh' Sehrawat",
+    role: "Officer",
+    link: "https://www.linkedin.com/in/vanshdeep-sehrawat-50603327a/",
+    src: "/AIDataScience_Image.jpg",
+  },
   {
     name: "Krystka Mariano",
     role: "Public Relations",
     link: "https://www.linkedin.com/in/krystka-mariano/",
     src: "/members/krystka_mariano.webp",
   },
-  {
-    name: "Daniel Gladstein",
-    role: "Outreach Officer",
-    link: "https://www.linkedin.com/in/daniel-gladstein-1b1ba0207",
-    src: "/members/daniel_gladstein.webp",
-  },
-  {
-    name: "Ziad Alharbi",
-    role: "Outreach Offier",
-    link: "",
-    src: "/AIDataScience_Image.jpg",
-  },
+  // {
+  //   name: "Ziad Alharbi",
+  //   role: "Outreach Offier",
+  //   link: "",
+  //   src: "/AIDataScience_Image.jpg",
+  // },
 ];
 
 const members_development: Member[] = [
-  {
-    name: "Sebastian Yepez",
-    role: "Workshop Officer",
-    link: "https://sebastianyepez.github.io",
-    src: "/members/sebastian_yepez.webp",
-  },
   {
     name: "Narek 'Tony' Tonoyan",
     role: "Member Development",
